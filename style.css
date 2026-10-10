@@ -1,9 +1,9 @@
-/* Pletánky.cz – ukázka vzhledu, verze 2 (Studentské Weby, 10. 10. 2026)
+/* Pletánky.cz – ukázka vzhledu, verze 3 (Studentské Weby, 10. 10. 2026)
    Podle zpětné vazby klientky: jedno písmo, jeden nadpis na sekci, ostré rohy, sekce oddělené jemnou linkou (vzor bellarose.cz),
    rozbalení info u produktů (vzor cernaovecka.cz). Dvě barevné varianty přes CSS proměnné:
    A = bílá / smetanová / champagne + zlatá tlačítka, B = zlatá horní a spodní lišta + bordó tam, kde byla zlatá.
    Psané tak, aby šlo převést do vlastní šablony Shoptetu (CSS proměnné, BEM třídy). */
-:root,[data-theme="a"]{
+:root,[data-theme="a"],[data-theme="c"]{
   --bg:#fff; --alt:#faf6f0; --champ:#f2e9dc; --line:#e8dfd3; --line-2:#d9cdbd;
   --ink:#2b2226; --muted:#7a6e70; --soft:#a89c96;
   --accent:#a67d38; --accent-h:#8c6629; --accent-ink:#fff;   /* tlačítka „do košíku“ */
@@ -29,6 +29,12 @@
   --ftr-bg:var(--gold-grad); --ftr-ink:#2a1a1f; --ftr-line:rgba(42,26,31,.18);
   --news-bg:#7a1f35; --news-ink:#fff;
 }
+/* verze 3: světlá varianta, horní a spodní lišta bordó */
+[data-theme="c"]{
+  --top-bg:#7a1f35; --top-ink:#fff;
+  --ftr-bg:#7a1f35; --ftr-ink:#f6ece2; --ftr-line:rgba(255,255,255,.22);
+}
+[data-theme="c"] .ftr__soc a:hover{background:#fff;color:#7a1f35}
 *,*::before,*::after{box-sizing:border-box;border-radius:0}
 html{-webkit-text-size-adjust:100%;scroll-padding-top:150px}
 body{margin:0;font-family:var(--font);font-size:16px;line-height:1.6;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -69,13 +75,13 @@ button{cursor:pointer;background:none;border:0;padding:0}
 
 .hdr{position:sticky;top:0;z-index:60;background:var(--hdr-bg);color:var(--hdr-ink);border-bottom:1px solid var(--hdr-line);transition:box-shadow .3s}
 .hdr.is-stuck{box-shadow:0 10px 30px -22px rgba(43,34,38,.45)}
-.hdr__in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;height:96px;transition:height .3s}
+.hdr__in{display:grid;grid-template-columns:1fr minmax(280px,440px) 1fr;align-items:center;gap:24px;height:96px;transition:height .3s}
 .hdr.is-stuck .hdr__in{height:76px}
 .hdr__burger{display:none}
-.logo{display:flex;flex-direction:column;align-items:center;line-height:1;text-align:center}
-.logo__txt{font-size:31px;font-weight:400;letter-spacing:.28em;text-transform:uppercase;margin-right:-.28em}
+.logo{display:flex;flex-direction:column;align-items:flex-start;line-height:1;text-align:left;justify-self:start}
+.logo__txt{font-size:31px;font-weight:400;letter-spacing:.28em;text-transform:uppercase}
 .logo__sub{font-size:10.5px;letter-spacing:.32em;text-transform:uppercase;margin-top:8px;opacity:.75}
-.search{display:flex;align-items:center;gap:10px;height:44px;max-width:340px;padding:0 14px;background:var(--search-bg);border:1px solid var(--hdr-line)}
+.search{display:flex;align-items:center;gap:10px;height:44px;width:100%;padding:0 14px;background:var(--search-bg);border:1px solid var(--hdr-line)}
 .search input{flex:1;border:0;outline:0;background:none;font-size:14px;min-width:0}
 .search input::placeholder{color:var(--soft)}
 .hdr__acts{display:flex;justify-content:flex-end;align-items:center;gap:8px}
@@ -142,6 +148,14 @@ button{cursor:pointer;background:none;border:0;padding:0}
 .tile__more>span{min-height:0;overflow:hidden}
 .tile:hover .tile__more,.tile:focus-visible .tile__more{grid-template-rows:1fr;margin-top:8px}
 .tiles--blog .tile{aspect-ratio:3/4}
+.tiles--mosaic{grid-auto-flow:dense;gap:0;border:1px solid var(--line)}
+.tiles--mosaic .tile{aspect-ratio:auto;min-height:260px;outline:1px solid #fff;outline-offset:-1px}
+.tile--w2{grid-column:span 2}.tile--h2{grid-row:span 2}
+.sec__lead{text-align:center;color:var(--muted);max-width:60ch;margin:-14px auto 36px}
+.motm-mini{display:flex;align-items:center;gap:12px;margin:0 0 22px;padding:8px 14px 8px 8px;border:1px solid var(--line-2);background:#fff;max-width:340px}
+.motm-mini img{width:54px;height:54px;object-fit:cover}
+.motm-mini small{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mark)}
+.motm-mini b{font-weight:400;font-size:14px;line-height:1.3}
 
 /* produkty */
 .pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px 28px}
@@ -205,7 +219,7 @@ button{cursor:pointer;background:none;border:0;padding:0}
 .motm__cta{display:flex;flex-wrap:wrap;gap:12px}
 
 /* recenze */
-.rvs{display:grid;grid-template-columns:300px minmax(0,1fr);gap:48px;align-items:start}
+.rvs{display:grid;grid-template-columns:300px minmax(0,1fr);gap:32px;align-items:stretch}
 .rvs__sum{border:1px solid var(--line);padding:30px 28px;text-align:center;background:var(--alt)}
 .rvs__score{font-size:64px;font-weight:300;line-height:1;margin:0 0 8px}
 .stars{display:inline-flex;gap:2px;color:var(--star)}
@@ -221,7 +235,8 @@ button{cursor:pointer;background:none;border:0;padding:0}
 .rvs__tabs button::after,.tabs__nav button::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--accent);transform:scaleX(0);transition:transform .3s var(--ease)}
 .rvs__tabs button.is-on,.tabs__nav button.is-on{color:var(--ink)}
 .rvs__tabs button.is-on::after,.tabs__nav button.is-on::after{transform:scaleX(1)}
-.rvs__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rvs__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;grid-auto-rows:1fr}
+.rvs__main{display:flex;flex-direction:column}.rvs__main .tabs__panel.is-on{flex:1;display:flex;flex-direction:column}.rvs__main .rvs__grid{flex:1}
 .rv{margin:0;border:1px solid var(--line);padding:22px 22px 18px;display:flex;flex-direction:column;gap:12px}
 .rv blockquote{margin:0;font-size:15px;line-height:1.6;flex:1}
 .rv figcaption{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
@@ -526,3 +541,19 @@ button{cursor:pointer;background:none;border:0;padding:0}
   .cmp__head p{flex-basis:100%;order:3}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* verze 3: mozaika a logo na mobilu */
+@media (max-width:980px){
+  .logo{justify-self:center;align-items:center;text-align:center}
+  .tiles--mosaic .tile{min-height:200px}
+  .tile--h2{grid-row:span 1}
+}
+@media (max-width:560px){
+  .tiles--mosaic{gap:0}
+  .tile--w2{grid-column:span 2}
+  .motm-mini{max-width:none}
+}
+@media (max-width:980px){
+  .tiles--mosaic .tile--w2{grid-column:auto}
+  .tiles--mosaic .tile:first-child,.tiles--mosaic .tile:last-child{grid-column:span 2}
+}

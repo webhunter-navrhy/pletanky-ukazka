@@ -1,17 +1,17 @@
 <!doctype html>
-<html lang="cs" data-theme="a">
+<html lang="cs" data-theme="c">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Pletánky.cz – příze, macramé a korálky | ukázka vzhledu</title>
 <meta name="description" content="Nezávazná ukázka vzhledu e-shopu Pletánky.cz">
-<script>(function(){var s=new URLSearchParams(location.search),q=s.get('barvy'),t=q;try{if(!t)t=localStorage.getItem('pl-barvy');if(q&&!s.has('nahled'))localStorage.setItem('pl-barvy',q)}catch(e){}document.documentElement.setAttribute('data-theme',t==='b'?'b':'a');if(s.has('nahled'))document.documentElement.classList.add('is-preview')})()</script>
+<script>document.documentElement.setAttribute('data-theme','c');if(new URLSearchParams(location.search).has('nahled'))document.documentElement.classList.add('is-preview')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap&subset=latin-ext" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=ea93b574">
-<script src="main.js?v=3a1491dc" defer></script>
+<link rel="stylesheet" href="style.css?v=68bfdc26">
+<script src="main.js?v=77ee12ee" defer></script>
 </head>
 <body class="">
 <a class="skip" href="#obsah">Přejít na obsah</a>
@@ -25,13 +25,13 @@
 <header class="hdr" id="hdr">
   <div class="wrap hdr__in">
     <button class="hdr__burger" type="button" aria-label="Menu" data-menu-open><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <a class="logo" href="index.html" aria-label="Pletánky – úvod">
+      <span class="logo__txt">Pletánky</span><small class="logo__sub">příze &amp; tvoření</small>
+    </a>
     <form class="search" role="search" onsubmit="return false">
       <svg class="ico ico--sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg>
       <input type="search" placeholder="Hledat přízi, barvu nebo značku…" aria-label="Hledat">
     </form>
-    <a class="logo" href="index.html" aria-label="Pletánky – úvod">
-      <span class="logo__txt">Pletánky</span><small class="logo__sub">příze &amp; tvoření</small>
-    </a>
     <nav class="hdr__acts" aria-label="Účet a košík">
       <a class="hdr__act" href="#"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c1.2-3.6 4-5.3 7.5-5.3s6.3 1.7 7.5 5.3"/></svg><span>Přihlášení</span></a>
       <button class="hdr__act cartbtn" type="button" data-cart-open aria-label="Košík">
@@ -75,6 +75,7 @@
     <div class="banner__box">
       <h1 class="h1">Každý projekt začíná jedním klubkem</h1>
       <p>Příze DROPS, Alize a YarnArt, šňůry na macramé, korálky a kameny. Vyberte si barvu, která Vám udělá radost.</p>
+      <a class="motm-mini" href="produkt.html"><img src="img/p/svestka-velka.jpg" alt=""><span><small>Odstín měsíce</small><b>DROPS Brushed Alpaca Silk 44 – švestka</b></span></a>
       <div class="banner__cta">
         <a class="btn btn--cart" href="kategorie.html">Vybrat přízi</a>
         <a class="btn btn--line" href="kategorie.html">Akce DROPS až −30&nbsp;%</a>
@@ -85,38 +86,38 @@
 
 <div class="usp">
   <div class="wrap usp__in">
-    <span><svg class="ico ico--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.6"/><circle cx="17" cy="17.5" r="1.6"/></svg> Doprava zdarma od 2&nbsp;000&nbsp;Kč</span>
-    <span><svg class="ico ico--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg> Hodnocení obchodu 5,0 z&nbsp;5</span>
-    <span><svg class="ico ico--sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7.5"/><path d="M6 8.5c4 .5 8.5 3.5 10.5 9M5 12.5c3.5 0 7.5 2.5 9 6.5M8.5 5.2c3.3 1.4 7.5 5 9 9.5M12 4.5c2.5 2 4.5 4.5 5.8 7"/></svg> Desítky odstínů od každé příze</span>
-    <span><svg class="ico ico--sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="9" width="16" height="11"/><path d="M4 13h16M12 9v11M12 9c-1.5-3-5-3.5-5-1.2C7 9 9.5 9 12 9zm0 0c1.5-3 5-3.5 5-1.2C17 9 14.5 9 12 9z"/></svg> Dárkové poukazy</span>
+    <span><svg class="ico ico--sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7.5"/><path d="M6 8.5c4 .5 8.5 3.5 10.5 9M5 12.5c3.5 0 7.5 2.5 9 6.5M8.5 5.2c3.3 1.4 7.5 5 9 9.5M12 4.5c2.5 2 4.5 4.5 5.8 7"/></svg> Široký výběr produktů</span>
+    <span><svg class="ico ico--sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="9" width="16" height="11"/><path d="M4 13h16M12 9v11M12 9c-1.5-3-5-3.5-5-1.2C7 9 9.5 9 12 9zm0 0c1.5-3 5-3.5 5-1.2C17 9 14.5 9 12 9z"/></svg> Balíme s láskou</span>
+    <span><svg class="ico ico--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg> Tvoříme vědomě</span>
+    <span><svg class="ico ico--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg> Prodáváme, co sami používáme</span>
   </div>
 </div>
 
 <section class="sec">
   <div class="wrap">
     <div class="sh"><h2 class="h2">Oblíbené kategorie</h2></div>
-    <div class="tiles"><a class="tile" href="kategorie.html">
+    <div class="tiles tiles--mosaic"><a class="tile tile--w2 tile--h2" href="kategorie.html">
   <img src="img/photo/moher.jpg" alt="" loading="lazy">
   <span class="tile__box"><b>Příze na pletení</b><span class="tile__more"><span>Alpaka, merino, moher i bavlna od DROPS, Alize a YarnArt</span></span></span>
 </a><a class="tile" href="kategorie.html">
   <img src="img/photo/kordonet.jpg" alt="" loading="lazy">
   <span class="tile__box"><b>Háčkovací příze</b><span class="tile__more"><span>Kordonety, Moonlight, Sněhurka a další</span></span></span>
-</a><a class="tile" href="kategorie.html">
+</a><a class="tile tile--h2" href="kategorie.html">
   <img src="img/photo/macrame-snura.jpg" alt="" loading="lazy">
   <span class="tile__box"><b>Špagáty a macramé</b><span class="tile__more"><span>Šňůry, cordy a Twisted macrame</span></span></span>
 </a><a class="tile" href="kategorie.html">
   <img src="img/photo/jehlice.jpg" alt="" loading="lazy">
   <span class="tile__box"><b>Pomůcky</b><span class="tile__more"><span>Jehlice, háčky a značky na očka</span></span></span>
-</a><a class="tile" href="kategorie.html">
+</a><a class="tile tile--w2" href="kategorie.html">
   <img src="img/photo/koralky.jpg" alt="" loading="lazy">
   <span class="tile__box"><b>Korálky</b><span class="tile__more"><span>Ohňovky, mačkané i dřevěné</span></span></span>
-</a><a class="tile" href="kategorie.html">
+</a><a class="tile tile--h2" href="kategorie.html">
   <img src="img/photo/kameny.jpg" alt="" loading="lazy">
   <span class="tile__box"><b>Kameny a minerály</b><span class="tile__more"><span>Achát, ametyst a další</span></span></span>
-</a><a class="tile" href="kategorie.html">
+</a><a class="tile tile--h2" href="kategorie.html">
   <img src="img/photo/komponenty.jpg" alt="" loading="lazy">
   <span class="tile__box"><b>Bižuterní komponenty</b><span class="tile__more"><span>Kaplíky, kaloty, zapínání</span></span></span>
-</a><a class="tile" href="kategorie.html">
+</a><a class="tile tile--w2" href="kategorie.html">
   <img src="img/photo/klubko.jpg" alt="" loading="lazy">
   <span class="tile__box"><b>Dárkové poukazy</b><span class="tile__more"><span>Pro všechny, kdo rádi tvoří</span></span></span>
 </a></div>
@@ -200,17 +201,66 @@
 
 <section class="sec">
   <div class="wrap">
-    <div class="sh"><h2 class="h2">Odstín měsíce</h2></div>
-    <div class="motm">
-      <a class="motm__img" href="produkt.html"><img src="img/p/svestka-velka.jpg" alt="Příze DROPS Brushed Alpaca Silk 44 – švestka" loading="lazy"></a>
-      <div class="motm__txt">
-        <p class="motm__name">DROPS Brushed Alpaca Silk 44 – švestka</p>
-        <p>Přepychová směs počesané alpaky a morušového hedvábí. Lehoučká, hřejivá a krásně vzdušná, skvělá i jako příplet.</p>
-        <dl class="pc__specs"><div><dt>Složení</dt><dd>77 % alpaka, 23 % hedvábí</dd></div><div><dt>Váha / návin</dt><dd>25 g = cca 140 m</dd></div><div><dt>Jehlice</dt><dd>5 mm</dd></div></dl>
-        <p class="motm__price"><s>81&nbsp;Kč</s><b>57&nbsp;Kč</b></p>
-        <div class="motm__cta"><button class="btn btn--cart" type="button" data-add data-name="Příze DROPS Brushed Alpaca Silk 44 - švestka" data-price="57" data-img="img/p/prize-drops-brushed-alpaca-silk-44-svestka.jpg"><svg class="ico ico--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8.5h13l-1 11.5h-11z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></svg><span>Do košíku</span></button><a class="btn btn--line" href="produkt.html">Všechny odstíny</a></div>
-      </div>
+    <div class="sh"><h2 class="h2">Krása podzimu</h2></div>
+    <p class="sec__lead">Téma měsíce: tipy a doporučené produkty k nákupu. Název sekce i výběr produktů si budete měnit podle potřeby.</p>
+    <div class="pgrid"><article class="pc">
+  <div class="pc__box">
+    <a class="pc__img" href="produkt.html">
+      <span class="pc__flags"></span>
+      <img src="img/p/ametyst-kulicka-fazetovana-6mm.jpg" alt="Ametyst, kulička fazetovaná 6mm" loading="lazy" width="720" height="720">
+    </a>
+    <a class="pc__name" href="produkt.html">Ametyst, kulička fazetovaná 6mm</a>
+    <p class="pc__price"><b>4,50&nbsp;Kč</b></p>
+    <div class="pc__more">
+      <p class="pc__lead">Fazetovaná kulička z ametystu</p><dl class="pc__specs"><div><dt>Průměr</dt><dd>6 mm</dd></div></dl>
+      <p class="pc__av"><svg class="ico ico--xs" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg> Skladem (&gt;100 ks)</p>
+      <button class="btn btn--cart btn--full" type="button" data-add data-name="Ametyst, kulička fazetovaná 6mm" data-price="4.5" data-img="img/p/ametyst-kulicka-fazetovana-6mm.jpg"><svg class="ico ico--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8.5h13l-1 11.5h-11z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></svg><span>Do košíku</span></button>
     </div>
+  </div>
+</article><article class="pc">
+  <div class="pc__box">
+    <a class="pc__img" href="produkt.html">
+      <span class="pc__flags"></span>
+      <img src="img/p/hacek-drops-pro-circus-4-13-cm.jpg" alt="Háček Drops Pro Circus 4 - 13 cm" loading="lazy" width="720" height="720">
+    </a>
+    <a class="pc__name" href="produkt.html">Háček Drops Pro Circus 4 - 13 cm</a>
+    <p class="pc__price"><b>51&nbsp;Kč</b></p>
+    <div class="pc__more">
+      <p class="pc__lead">Hliníkový háček, délka 13 cm</p><dl class="pc__specs"><div><dt>Velikost</dt><dd>4 mm</dd></div></dl>
+      <p class="pc__av"><svg class="ico ico--xs" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg> Skladem (12 ks)</p>
+      <button class="btn btn--cart btn--full" type="button" data-add data-name="Háček Drops Pro Circus 4 - 13 cm" data-price="51.0" data-img="img/p/hacek-drops-pro-circus-4-13-cm.jpg"><svg class="ico ico--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8.5h13l-1 11.5h-11z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></svg><span>Do košíku</span></button>
+    </div>
+  </div>
+</article><article class="pc">
+  <div class="pc__box">
+    <a class="pc__img" href="produkt.html">
+      <span class="pc__flags"></span>
+      <img src="img/p/znacky-na-ocka-drops-stitch-markers-30ks.jpg" alt="Značky na očka - Drops Stitch Markers (30ks)" loading="lazy" width="720" height="720">
+    </a>
+    <a class="pc__name" href="produkt.html">Značky na očka - Drops Stitch Markers (30ks)</a>
+    <p class="pc__price"><b>47&nbsp;Kč</b></p>
+    <div class="pc__more">
+      <p class="pc__lead">Plastové zavírací sponky pro označení řad či oček</p><dl class="pc__specs"><div><dt>Balení</dt><dd>30 ks</dd></div></dl>
+      <p class="pc__av"><svg class="ico ico--xs" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg> Skladem (13 balení)</p>
+      <button class="btn btn--cart btn--full" type="button" data-add data-name="Značky na očka - Drops Stitch Markers (30ks)" data-price="47.0" data-img="img/p/znacky-na-ocka-drops-stitch-markers-30ks.jpg"><svg class="ico ico--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8.5h13l-1 11.5h-11z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></svg><span>Do košíku</span></button>
+    </div>
+  </div>
+</article><article class="pc">
+  <div class="pc__box">
+    <a class="pc__img" href="produkt.html">
+      <span class="pc__flags"><span class="flag">Akce</span><span class="flag flag--sleva">–34 %</span></span>
+      <img src="img/p/jehlice-ponozkove-5-mm-20-cmdrops-pro-romance-birch.jpg" alt="Jehlice ponožkové 5 mm/20 cm DROPS Pro Romance (Birch)" loading="lazy" width="720" height="720">
+    </a>
+    <a class="pc__name" href="produkt.html">Jehlice ponožkové 5 mm/20 cm DROPS Pro Romance (Birch)</a>
+    <p class="pc__price"><s>232&nbsp;Kč</s><b>152&nbsp;Kč</b></p>
+    <div class="pc__more">
+      <p class="pc__lead">Hladké a lehké ponožkové jehlice z březového dřeva</p><dl class="pc__specs"><div><dt>Velikost</dt><dd>5 mm</dd></div><div><dt>Délka</dt><dd>20 cm</dd></div><div><dt>Balení</dt><dd>5 ks</dd></div></dl>
+      <p class="pc__av"><svg class="ico ico--xs" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg> Skladem (3 balení)</p>
+      <button class="btn btn--cart btn--full" type="button" data-add data-name="Jehlice ponožkové 5 mm/20 cm DROPS Pro Romance (Birch)" data-price="152.0" data-img="img/p/jehlice-ponozkove-5-mm-20-cmdrops-pro-romance-birch.jpg"><svg class="ico ico--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 8.5h13l-1 11.5h-11z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></svg><span>Do košíku</span></button>
+    </div>
+  </div>
+</article></div>
+    <p class="sec__more"><a class="btn btn--line" href="kategorie.html">Všechny tipy</a></p>
   </div>
 </section>
 
@@ -312,7 +362,7 @@
       </div>
       <div class="rvs__main" data-tabs>
         <div class="rvs__tabs" role="tablist"><button class="is-on" type="button" data-tab>Hodnocení obchodu</button><button type="button" data-tab>Komentáře k produktům</button></div>
-        <div class="tabs__panel is-on"><div class="rvs__grid"><figure class="rv"><span class="stars" aria-label="5 z 5 hvězdiček"><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg></span><blockquote>Maximální spokojenost, velmi rychlé vyřízení objednávky, rychlé dodání, nakupuji opakovaně.</blockquote><figcaption><b>Lenka S.</b><span>16.&nbsp;4.&nbsp;2026</span></figcaption></figure><figure class="rv"><span class="stars" aria-label="5 z 5 hvězdiček"><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg></span><blockquote>Skvělý obchůdek, dobrý výběr i ceny, ochotní a vstřícní lidé a rychlé dodání. Jsem moc spokojená, nakupuji opakovaně, určitě jen doporučuji.</blockquote><figcaption><b>Gabriela F.</b><span>15.&nbsp;1.&nbsp;2026</span></figcaption></figure><figure class="rv"><span class="stars" aria-label="5 z 5 hvězdiček"><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg></span><blockquote>Velmi rychlé dodání, jeden den objednáte, druhý máte a pak už jen pletete a háčkujete a je to krása :-)</blockquote><figcaption><b>Jana K.</b><span>18.&nbsp;8.&nbsp;2025</span></figcaption></figure><figure class="rv"><span class="stars" aria-label="5 z 5 hvězdiček"><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg></span><blockquote>Ihned při zaplacení odesláno. Udělala jsem chybu v e-mailu ale s lidma na podpoře se dalo skvěle domluvit. Vlny dorazily v pořádku a v uvedené kvalitě. Určitě budu zde znovu objednávat ❤️</blockquote><figcaption><b>Jana A.</b><span>11.&nbsp;7.&nbsp;2025</span></figcaption></figure><figure class="rv"><span class="stars" aria-label="5 z 5 hvězdiček"><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg></span><blockquote>Vždy vše v pořádku. Doporučuji.</blockquote><figcaption><b>Ivana H.</b><span>24.&nbsp;11.&nbsp;2025</span></figcaption></figure><figure class="rv"><span class="stars" aria-label="5 z 5 hvězdiček"><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg></span><blockquote>Určitě doporučuji</blockquote><figcaption><b>Pavla W.</b><span>13.&nbsp;4.&nbsp;2026</span></figcaption></figure></div><p class="sec__note">Skutečná hodnocení ze stránky Hodnocení obchodu na pletanky.cz. V Shoptetu se načítají samy.</p></div>
+        <div class="tabs__panel is-on"><div class="rvs__grid"><figure class="rv"><span class="stars" aria-label="5 z 5 hvězdiček"><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg></span><blockquote>Maximální spokojenost, velmi rychlé vyřízení objednávky, rychlé dodání, nakupuji opakovaně.</blockquote><figcaption><b>Lenka S.</b><span>16.&nbsp;4.&nbsp;2026</span></figcaption></figure><figure class="rv"><span class="stars" aria-label="5 z 5 hvězdiček"><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg></span><blockquote>Skvělý obchůdek, dobrý výběr i ceny, ochotní a vstřícní lidé a rychlé dodání. Jsem moc spokojená, nakupuji opakovaně, určitě jen doporučuji.</blockquote><figcaption><b>Gabriela F.</b><span>15.&nbsp;1.&nbsp;2026</span></figcaption></figure><figure class="rv"><span class="stars" aria-label="5 z 5 hvězdiček"><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg></span><blockquote>Velmi rychlé dodání, jeden den objednáte, druhý máte a pak už jen pletete a háčkujete a je to krása :-)</blockquote><figcaption><b>Jana K.</b><span>18.&nbsp;8.&nbsp;2025</span></figcaption></figure></div><p class="sec__note">Skutečná hodnocení ze stránky Hodnocení obchodu na pletanky.cz. V Shoptetu se načítají samy.</p></div>
         <div class="tabs__panel"><div class="rvs__grid rvs__grid--3"><figure class="rv rv--prod"><a class="rv__p" href="produkt.html"><img src="img/p/prize-drops-brushed-alpaca-silk-44-svestka.jpg" alt="" loading="lazy"><span>Příze DROPS Brushed Alpaca Silk 44 - švestka</span></a><span class="stars" aria-label="5 z 5 hvězdiček"><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg></span><blockquote class="rv__ph">Tady se automaticky zobrazí poslední komentář zákaznice k tomuto produktu.</blockquote><figcaption><b>Jméno zákaznice</b><span class="tag">ilustrační</span></figcaption></figure><figure class="rv rv--prod"><a class="rv__p" href="produkt.html"><img src="img/p/prize-drops-brushed-alpaca-silk-20-ruzovy-pisek.jpg" alt="" loading="lazy"><span>Příze DROPS Brushed Alpaca Silk 20 - růžový písek</span></a><span class="stars" aria-label="5 z 5 hvězdiček"><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg></span><blockquote class="rv__ph">Tady se automaticky zobrazí poslední komentář zákaznice k tomuto produktu.</blockquote><figcaption><b>Jméno zákaznice</b><span class="tag">ilustrační</span></figcaption></figure><figure class="rv rv--prod"><a class="rv__p" href="produkt.html"><img src="img/p/prize-drops-brushed-alpaca-silk-41-psenicne-pole.jpg" alt="" loading="lazy"><span>Příze DROPS Brushed Alpaca Silk 41 - pšeničné pole</span></a><span class="stars" aria-label="5 z 5 hvězdiček"><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg><svg class="ico ico--star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg></span><blockquote class="rv__ph">Tady se automaticky zobrazí poslední komentář zákaznice k tomuto produktu.</blockquote><figcaption><b>Jméno zákaznice</b><span class="tag">ilustrační</span></figcaption></figure></div><p class="sec__note">Ilustrační ukázka: komentáře k produktům se zobrazí, jakmile je zákaznice napíšou.</p></div>
       </div>
     </div>
@@ -370,26 +420,25 @@
 </div>
 <div class="toast" data-toast role="status" aria-live="polite"></div>
 <div class="demo" role="region" aria-label="Ovládání ukázky">
-  <span class="demo__l"><svg class="ico ico--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4a8 8 0 1 0 0 16c1.2 0 1.8-.8 1.8-1.7 0-1.3-1-1.5-1-2.6 0-1 .8-1.7 1.8-1.7H17a3 3 0 0 0 3-3C20 7 16.4 4 12 4z"/><circle cx="8" cy="11" r="1"/><circle cx="10.5" cy="7.8" r="1"/><circle cx="14.5" cy="8" r="1"/></svg><span>Barevná varianta</span></span>
-  <button type="button" class="demo__b" data-theme-set="a"><i class="demo__sw demo__sw--a"></i>A<span> · světlá</span></button>
-  <button type="button" class="demo__b" data-theme-set="b"><i class="demo__sw demo__sw--b"></i>B<span> · zlatá a bordó</span></button>
-  <a class="demo__cmp" href="srovnani.html"><svg class="ico ico--sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="7.5" height="14"/><rect x="13" y="5" width="7.5" height="14"/></svg><span>Vedle sebe</span></a>
+  <span class="demo__l"><svg class="ico ico--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4a8 8 0 1 0 0 16c1.2 0 1.8-.8 1.8-1.7 0-1.3-1-1.5-1-2.6 0-1 .8-1.7 1.8-1.7H17a3 3 0 0 0 3-3C20 7 16.4 4 12 4z"/><circle cx="8" cy="11" r="1"/><circle cx="10.5" cy="7.8" r="1"/><circle cx="14.5" cy="8" r="1"/></svg><span>Nezávazná ukázka, verze 3</span></span>
   <button type="button" class="demo__info" data-about-open aria-label="O ukázce"><svg class="ico ico--sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5M12 7.8v.4"/></svg><span>O ukázce</span></button>
 </div>
 <div class="drawer drawer--about" data-about aria-hidden="true">
   <div class="drawer__panel">
-    <div class="drawer__head"><b>Nezávazná ukázka, verze 2</b><button type="button" data-about-close aria-label="Zavřít"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
+    <div class="drawer__head"><b>Nezávazná ukázka, verze 3</b><button type="button" data-about-close aria-label="Zavřít"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
     <div class="about">
       <p>Upravená ukázka vzhledu e-shopu <b>Pletánky.cz</b> od Studentských Webů podle Vaší zpětné vazby.</p>
       <ul>
-        <li>Barvy jsou ve dvou variantách. Přepínač je dole na stránce, tlačítkem „Vedle sebe“ je uvidíte obě najednou.</li>
+        <li>Světlá varianta se zlatými tlačítky, horní a spodní lišta je bordó.</li>
+        <li>Logo je vlevo, vyhledávání uprostřed. Oblíbené kategorie jsou rozložené nepravidelně.</li>
+        <li>Sekce „Krása podzimu“ je prostor pro téma měsíce a doporučené produkty, její název i výběr se dá měnit. Odstín měsíce je v banneru jako malý rámeček.</li>
         <li>Jedno písmo pro všechny nadpisy i názvy, u každé sekce jeden nadpis, ostré rohy a sekce oddělené jemnou linkou.</li>
         <li>Najeďte myší na produkt: rozbalí se složení, návin, jehlice a tlačítko do košíku.</li>
         <li>Recenze jsou skutečná hodnocení z Vaší stránky Hodnocení obchodu (stav 10.&nbsp;10.&nbsp;2026). Komentáře k produktům jsou jen ilustrační místa.</li>
         <li>Názvy, ceny a údaje produktů jsou z pletanky.cz. Fotky v banneru, u projektů a v blogu jsou ilustrační (volně použitelné z Pexels), nahradí je Vaše vlastní. Logo je zatím zástupné.</li>
         <li>Všechno se dá postavit jako vlastní vzhled na Shoptetu. Objednávky, zboží i zákaznické účty zůstanou, kde jsou.</li>
       </ul>
-      <p class="about__nav"><a href="index.html">Úvod</a><a href="kategorie.html">Kategorie</a><a href="produkt.html">Detail produktu</a><a href="srovnani.html">Obě varianty vedle sebe</a><a href="v1/index.html">První verze</a></p>
+      <p class="about__nav"><a href="index.html">Úvod</a><a href="kategorie.html">Kategorie</a><a href="produkt.html">Detail produktu</a><a href="v1/index.html">První verze</a></p>
     </div>
   </div>
 </div>

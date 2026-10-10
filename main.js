@@ -1,19 +1,10 @@
-/* Pletánky.cz – ukázka vzhledu, verze 2. Lehké vanilla JS, převoditelné do Shoptetu (vlastní JS v patičce). */
+/* Pletánky.cz – ukázka vzhledu, verze 3. Lehké vanilla JS, převoditelné do Shoptetu (vlastní JS v patičce). */
 (function () {
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
   const FREE = 2000;
   const fmt = n => n.toLocaleString('cs-CZ', { maximumFractionDigits: 2 }) + ' Kč';
   const root = document.documentElement;
-
-  /* barevná varianta A / B (jen pro ukázku) */
-  const markTheme = () => $$('[data-theme-set]').forEach(b => b.classList.toggle('is-on', b.dataset.themeSet === root.getAttribute('data-theme')));
-  $$('[data-theme-set]').forEach(b => b.addEventListener('click', () => {
-    root.setAttribute('data-theme', b.dataset.themeSet);
-    try { localStorage.setItem('pl-barvy', b.dataset.themeSet); } catch (e) {}
-    markTheme();
-  }));
-  markTheme();
 
   /* stín hlavičky při scrollu */
   const hdr = $('#hdr');

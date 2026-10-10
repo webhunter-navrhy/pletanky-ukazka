@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Generuje index.html, kategorie.html, produkt.html a srovnani.html ukázky Pletánky.cz (verze 2) z produkty.json.
+"""Generuje index.html, kategorie.html, produkt.html ukázky Pletánky.cz (verze 3) z produkty.json.
 Data produktů (názvy, ceny, dostupnost, fotky, složení) jsou převzatá z pletanky.cz 7. a 10. 10. 2026.
 Verze 2 podle zpětné vazby klientky z 9. 10. 2026: jedno písmo, jeden nadpis na sekci, banner přes celou šířku,
 ostré rohy a jemné linky, fotky u projektů, blog jako dlaždice, rozbalení info u produktů, recenze,
-dvě barevné varianty (A světlá + zlatá tlačítka, B zlatá lišta + bordó). První verze je archivovaná ve v1/."""
+Verze 3 (10. 10. 2026, podle reakce klientky): světlá varianta se zlatými tlačítky, horní a spodní lišta bordó, logo vlevo a vyhledávání uprostřed,
+kategorie nepravidelně (ostré linie), sekce „Krása podzimu“ (téma měsíce) + malý Odstín měsíce v banneru, recenze v jednom řádku, nová prohlášení. První verze je archivovaná ve v1/."""
 import json, html
 from pathlib import Path
 
@@ -158,13 +159,13 @@ def header(active=""):
 <header class="hdr" id="hdr">
   <div class="wrap hdr__in">
     <button class="hdr__burger" type="button" aria-label="Menu" data-menu-open>{ico("menu")}</button>
+    <a class="logo" href="index.html" aria-label="Pletánky – úvod">
+      <span class="logo__txt">Pletánky</span><small class="logo__sub">příze &amp; tvoření</small>
+    </a>
     <form class="search" role="search" onsubmit="return false">
       {ico("search","ico ico--sm")}
       <input type="search" placeholder="Hledat přízi, barvu nebo značku…" aria-label="Hledat">
     </form>
-    <a class="logo" href="index.html" aria-label="Pletánky – úvod">
-      <span class="logo__txt">Pletánky</span><small class="logo__sub">příze &amp; tvoření</small>
-    </a>
     <nav class="hdr__acts" aria-label="Účet a košík">
       <a class="hdr__act" href="#">{ico("user")}<span>Přihlášení</span></a>
       <button class="hdr__act cartbtn" type="button" data-cart-open aria-label="Košík">
@@ -209,26 +210,25 @@ def cart_drawer():
 def demo_panel():
     """Přepínač barevných variant + informace o ukázce (není součást e-shopu)."""
     return f'''<div class="demo" role="region" aria-label="Ovládání ukázky">
-  <span class="demo__l">{ico("palette","ico ico--sm")}<span>Barevná varianta</span></span>
-  <button type="button" class="demo__b" data-theme-set="a"><i class="demo__sw demo__sw--a"></i>A<span> · světlá</span></button>
-  <button type="button" class="demo__b" data-theme-set="b"><i class="demo__sw demo__sw--b"></i>B<span> · zlatá a bordó</span></button>
-  <a class="demo__cmp" href="srovnani.html">{ico("cols","ico ico--sm")}<span>Vedle sebe</span></a>
+  <span class="demo__l">{ico("palette","ico ico--sm")}<span>Nezávazná ukázka, verze 3</span></span>
   <button type="button" class="demo__info" data-about-open aria-label="O ukázce">{ico("info","ico ico--sm")}<span>O ukázce</span></button>
 </div>
 <div class="drawer drawer--about" data-about aria-hidden="true">
   <div class="drawer__panel">
-    <div class="drawer__head"><b>Nezávazná ukázka, verze 2</b><button type="button" data-about-close aria-label="Zavřít">{ico("close")}</button></div>
+    <div class="drawer__head"><b>Nezávazná ukázka, verze 3</b><button type="button" data-about-close aria-label="Zavřít">{ico("close")}</button></div>
     <div class="about">
       <p>Upravená ukázka vzhledu e-shopu <b>Pletánky.cz</b> od Studentských Webů podle Vaší zpětné vazby.</p>
       <ul>
-        <li>Barvy jsou ve dvou variantách. Přepínač je dole na stránce, tlačítkem „Vedle sebe“ je uvidíte obě najednou.</li>
+        <li>Světlá varianta se zlatými tlačítky, horní a spodní lišta je bordó.</li>
+        <li>Logo je vlevo, vyhledávání uprostřed. Oblíbené kategorie jsou rozložené nepravidelně.</li>
+        <li>Sekce „Krása podzimu“ je prostor pro téma měsíce a doporučené produkty, její název i výběr se dá měnit. Odstín měsíce je v banneru jako malý rámeček.</li>
         <li>Jedno písmo pro všechny nadpisy i názvy, u každé sekce jeden nadpis, ostré rohy a sekce oddělené jemnou linkou.</li>
         <li>Najeďte myší na produkt: rozbalí se složení, návin, jehlice a tlačítko do košíku.</li>
         <li>Recenze jsou skutečná hodnocení z Vaší stránky Hodnocení obchodu (stav 10.&nbsp;10.&nbsp;2026). Komentáře k produktům jsou jen ilustrační místa.</li>
         <li>Názvy, ceny a údaje produktů jsou z pletanky.cz. Fotky v banneru, u projektů a v blogu jsou ilustrační (volně použitelné z Pexels), nahradí je Vaše vlastní. Logo je zatím zástupné.</li>
         <li>Všechno se dá postavit jako vlastní vzhled na Shoptetu. Objednávky, zboží i zákaznické účty zůstanou, kde jsou.</li>
       </ul>
-      <p class="about__nav"><a href="index.html">Úvod</a><a href="kategorie.html">Kategorie</a><a href="produkt.html">Detail produktu</a><a href="srovnani.html">Obě varianty vedle sebe</a><a href="v1/index.html">První verze</a></p>
+      <p class="about__nav"><a href="index.html">Úvod</a><a href="kategorie.html">Kategorie</a><a href="produkt.html">Detail produktu</a><a href="v1/index.html">První verze</a></p>
     </div>
   </div>
 </div>'''
@@ -250,17 +250,14 @@ def footer():
 </footer>'''
 
 
-THEME_JS = ("<script>(function(){var s=new URLSearchParams(location.search),q=s.get('barvy'),t=q;"
-            "try{if(!t)t=localStorage.getItem('pl-barvy');if(q&&!s.has('nahled'))localStorage.setItem('pl-barvy',q)}catch(e){}"
-            "document.documentElement.setAttribute('data-theme',t==='b'?'b':'a');"
-            "if(s.has('nahled'))document.documentElement.classList.add('is-preview')})()</script>")
+THEME_JS = "<script>document.documentElement.setAttribute('data-theme','c');if(new URLSearchParams(location.search).has('nahled'))document.documentElement.classList.add('is-preview')</script>"
 
 FONTS = '<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap&subset=latin-ext" rel="stylesheet">'
 
 
 def page(title, body, active="", cls="", desc="Nezávazná ukázka vzhledu e-shopu Pletánky.cz"):
     return f'''<!doctype html>
-<html lang="cs" data-theme="a">
+<html lang="cs" data-theme="c">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -301,9 +298,12 @@ TILES = [
 ]
 
 
-def tile(name, sub, img, href="kategorie.html", tag=""):
+MOSAIC = [" tile--w2 tile--h2", "", " tile--h2", "", " tile--w2", " tile--h2", " tile--h2", " tile--w2"]
+
+
+def tile(name, sub, img, href="kategorie.html", tag="", cls=""):
     tag = f"<small>{tag}</small>" if tag else ""
-    return f'''<a class="tile" href="{href}">
+    return f'''<a class="tile{cls}" href="{href}">
   <img src="{img}" alt="" loading="lazy">
   <span class="tile__box">{tag}<b>{name}</b><span class="tile__more"><span>{sub}</span></span></span>
 </a>'''
@@ -368,7 +368,7 @@ DIST = [(5, 4549), (4, 22), (3, 6), (2, 1), (1, 2)]
 def reviews():
     total = sum(n for _, n in DIST)
     bars = "".join(f'<li><span>{s}</span>{ico("star","ico ico--star")}<i><b style="width:{n / total * 100:.1f}%"></b></i><em>{n:,}</em></li>'.replace(",", "&nbsp;") for s, n in DIST)
-    cards = "".join(f'<figure class="rv">{stars()}<blockquote>{e(t)}</blockquote><figcaption><b>{e(n)}</b><span>{d.replace(" ", "&nbsp;")}</span></figcaption></figure>' for n, d, t in REVIEWS)
+    cards = "".join(f'<figure class="rv">{stars()}<blockquote>{e(t)}</blockquote><figcaption><b>{e(n)}</b><span>{d.replace(" ", "&nbsp;")}</span></figcaption></figure>' for n, d, t in REVIEWS[:3])
     pc = [p for p in P["cat"] if any(k in p["name"] for k in ["44 - švestka", "20 - růžový", "41 - pšeničné"])]
     comments = "".join(f'''<figure class="rv rv--prod"><a class="rv__p" href="produkt.html"><img src="{p["file"]}" alt="" loading="lazy"><span>{e(p["name"])}</span></a>{stars()}<blockquote class="rv__ph">Tady se automaticky zobrazí poslední komentář zákaznice k tomuto produktu.</blockquote><figcaption><b>Jméno zákaznice</b><span class="tag">ilustrační</span></figcaption></figure>''' for p in pc)
     return f'''<section class="sec">
@@ -412,6 +412,7 @@ home_body = f'''
     <div class="banner__box">
       <h1 class="h1">Každý projekt začíná jedním klubkem</h1>
       <p>Příze DROPS, Alize a YarnArt, šňůry na macramé, korálky a kameny. Vyberte si barvu, která Vám udělá radost.</p>
+      <a class="motm-mini" href="produkt.html"><img src="img/p/svestka-velka.jpg" alt=""><span><small>Odstín měsíce</small><b>DROPS Brushed Alpaca Silk 44 – švestka</b></span></a>
       <div class="banner__cta">
         <a class="btn btn--cart" href="kategorie.html">Vybrat přízi</a>
         <a class="btn btn--line" href="kategorie.html">Akce DROPS až −30&nbsp;%</a>
@@ -422,17 +423,17 @@ home_body = f'''
 
 <div class="usp">
   <div class="wrap usp__in">
-    <span>{ico("truck","ico ico--sm")} Doprava zdarma od 2&nbsp;000&nbsp;Kč</span>
-    <span>{ico("star","ico ico--sm")} Hodnocení obchodu 5,0 z&nbsp;5</span>
-    <span>{ico("yarn","ico ico--sm")} Desítky odstínů od každé příze</span>
-    <span>{ico("gift","ico ico--sm")} Dárkové poukazy</span>
+    <span>{ico("yarn","ico ico--sm")} Široký výběr produktů</span>
+    <span>{ico("gift","ico ico--sm")} Balíme s láskou</span>
+    <span>{ico("check","ico ico--sm")} Tvoříme vědomě</span>
+    <span>{ico("star","ico ico--sm")} Prodáváme, co sami používáme</span>
   </div>
 </div>
 
 <section class="sec">
   <div class="wrap">
     {sechead("Oblíbené kategorie")}
-    <div class="tiles">{"".join(tile(*t) for t in TILES)}</div>
+    <div class="tiles tiles--mosaic">{"".join(tile(*t, cls=c) for t, c in zip(TILES, MOSAIC))}</div>
   </div>
 </section>
 
@@ -442,17 +443,10 @@ home_body = f'''
 
 <section class="sec">
   <div class="wrap">
-    {sechead("Odstín měsíce")}
-    <div class="motm">
-      <a class="motm__img" href="produkt.html"><img src="img/p/svestka-velka.jpg" alt="Příze DROPS Brushed Alpaca Silk 44 – švestka" loading="lazy"></a>
-      <div class="motm__txt">
-        <p class="motm__name">DROPS Brushed Alpaca Silk 44 – švestka</p>
-        <p>Přepychová směs počesané alpaky a morušového hedvábí. Lehoučká, hřejivá a krásně vzdušná, skvělá i jako příplet.</p>
-        <dl class="pc__specs"><div><dt>Složení</dt><dd>77 % alpaka, 23 % hedvábí</dd></div><div><dt>Váha / návin</dt><dd>25 g = cca 140 m</dd></div><div><dt>Jehlice</dt><dd>5 mm</dd></div></dl>
-        <p class="motm__price"><s>81&nbsp;Kč</s><b>57&nbsp;Kč</b></p>
-        <div class="motm__cta"><button class="btn btn--cart" type="button" data-add data-name="Příze DROPS Brushed Alpaca Silk 44 - švestka" data-price="57" data-img="{svestka["file"]}">{ico("bag","ico ico--sm")}<span>Do košíku</span></button><a class="btn btn--line" href="produkt.html">Všechny odstíny</a></div>
-      </div>
-    </div>
+    {sechead("Krása podzimu")}
+    <p class="sec__lead">Téma měsíce: tipy a doporučené produkty k nákupu. Název sekce i výběr produktů si budete měnit podle potřeby.</p>
+    <div class="pgrid">{"".join(card(p) for p in P["mix"][4:8])}</div>
+    <p class="sec__more"><a class="btn btn--line" href="kategorie.html">Všechny tipy</a></p>
   </div>
 </section>
 
@@ -631,5 +625,4 @@ document.querySelectorAll('[data-cmp]').forEach(b=>b.addEventListener('click',()
 (ROOT / "index.html").write_text(page("Pletánky.cz – příze, macramé a korálky | ukázka vzhledu", home_body))
 (ROOT / "kategorie.html").write_text(page("DROPS Brushed Alpaca Silk – Pletánky.cz | ukázka vzhledu", cat_body, "Příze na pletení"))
 (ROOT / "produkt.html").write_text(page("Příze DROPS Brushed Alpaca Silk 44 – švestka – Pletánky.cz | ukázka vzhledu", prod_body, "Příze na pletení", "page-pd"))
-(ROOT / "srovnani.html").write_text(cmp_page)
 print("ok")
