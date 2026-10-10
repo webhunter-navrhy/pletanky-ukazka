@@ -27,12 +27,12 @@
   --top-bg:#b08a44; --top-ink:#2a1a1f;
   --hdr-bg:var(--gold-grad); --hdr-ink:#2a1a1f; --hdr-line:rgba(42,26,31,.16); --search-bg:rgba(255,255,255,.9);
   --ftr-bg:var(--gold-grad); --ftr-ink:#2a1a1f; --ftr-line:rgba(42,26,31,.18);
-  --news-bg:#7a1f35; --news-ink:#fff;
+  --news-bg:#5e2a50; --news-ink:#fff;
 }
 /* verze 3: světlá varianta, horní a spodní lišta bordó */
 [data-theme="c"]{
-  --top-bg:#7a1f35; --top-ink:#fff;
-  --ftr-bg:#7a1f35; --ftr-ink:#f6ece2; --ftr-line:rgba(255,255,255,.22);
+  --top-bg:#5e2a50; --top-ink:#fff;
+  --ftr-bg:#5e2a50; --ftr-ink:#f6ece2; --ftr-line:rgba(255,255,255,.22);
 }
 [data-theme="c"] .ftr__soc a:hover{background:#fff;color:#7a1f35}
 *,*::before,*::after{box-sizing:border-box;border-radius:0}
@@ -557,3 +557,11 @@ button{cursor:pointer;background:none;border:0;padding:0}
   .tiles--mosaic .tile--w2{grid-column:auto}
   .tiles--mosaic .tile:first-child,.tiles--mosaic .tile:last-child{grid-column:span 2}
 }
+
+/* verze 4: původní rozložení kategorií (2×2 velká, vysoká dlaždice), ostré rohy */
+.tiles--orig{grid-auto-rows:230px;gap:18px;grid-auto-flow:dense;border:0}
+.tiles--orig .tile{aspect-ratio:auto;min-height:0;outline:0}
+.tiles--orig .t--big{grid-column:span 2;grid-row:span 2}
+.tiles--orig .t--tall{grid-row:span 2}
+@media (max-width:980px){.tiles--orig{grid-auto-rows:190px}.tiles--orig .t--tall{grid-row:span 1}}
+@media (max-width:560px){.tiles--orig{grid-auto-rows:160px;gap:12px}.tiles--orig .t--big{grid-column:span 2;grid-row:span 1}}

@@ -220,7 +220,7 @@ def demo_panel():
       <p>Upravená ukázka vzhledu e-shopu <b>Pletánky.cz</b> od Studentských Webů podle Vaší zpětné vazby.</p>
       <ul>
         <li>Světlá varianta se zlatými tlačítky, horní a spodní lišta je bordó.</li>
-        <li>Logo je vlevo, vyhledávání uprostřed. Oblíbené kategorie jsou rozložené nepravidelně.</li>
+        <li>Logo je vlevo, vyhledávání uprostřed. Oblíbené kategorie mají původní rozložení, rohy jsou ostré.</li>
         <li>Sekce „Krása podzimu“ je prostor pro téma měsíce a doporučené produkty, její název i výběr se dá měnit. Odstín měsíce je v banneru jako malý rámeček.</li>
         <li>Jedno písmo pro všechny nadpisy i názvy, u každé sekce jeden nadpis, ostré rohy a sekce oddělené jemnou linkou.</li>
         <li>Najeďte myší na produkt: rozbalí se složení, návin, jehlice a tlačítko do košíku.</li>
@@ -298,7 +298,7 @@ TILES = [
 ]
 
 
-MOSAIC = [" tile--w2 tile--h2", "", " tile--h2", "", " tile--w2", " tile--h2", " tile--h2", " tile--w2"]
+MOSAIC = [" t--big", "", "", " t--tall", "", "", "", ""]
 
 
 def tile(name, sub, img, href="kategorie.html", tag="", cls=""):
@@ -433,7 +433,7 @@ home_body = f'''
 <section class="sec">
   <div class="wrap">
     {sechead("Oblíbené kategorie")}
-    <div class="tiles tiles--mosaic">{"".join(tile(*t, cls=c) for t, c in zip(TILES, MOSAIC))}</div>
+    <div class="tiles tiles--orig">{"".join(tile(*t, cls=c) for t, c in zip(TILES, MOSAIC))}</div>
   </div>
 </section>
 
