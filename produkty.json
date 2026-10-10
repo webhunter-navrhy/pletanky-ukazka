@@ -16,7 +16,24 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "Přepychová směs počesané alpaky a morušového hedvábí",
+    "specs": [
+     [
+      "Složení",
+      "77 % alpaka, 23 % hedvábí"
+     ],
+     [
+      "Váha / návin",
+      "25 g = cca 140 metrů"
+     ],
+     [
+      "Jehlice",
+      "5 mm"
+     ]
+    ]
+   }
   },
   {
    "name": "Příze Drops Nord uni color 30 - bordó",
@@ -34,7 +51,24 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "Jemná a odolná směs alpaky, vlny a polyamidu",
+    "specs": [
+     [
+      "Složení",
+      "45 % alpaka, 30 % polyamid, 25 % vlna"
+     ],
+     [
+      "Váha / návin",
+      "50 g = cca 170 metrů"
+     ],
+     [
+      "Jehlice",
+      "3 mm"
+     ]
+    ]
+   }
   },
   {
    "name": "Příze DROPS Nepal mix 4434 - purpurová",
@@ -52,7 +86,24 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "Krásná robustní příze ze směsi alpaka vlny a ovčí vlny vhodná pro pletení i háčkování",
+    "specs": [
+     [
+      "Složení",
+      "65 % vlna, 35 % alpaka"
+     ],
+     [
+      "Váha / návin",
+      "50 g = cca 75 metrů"
+     ],
+     [
+      "Jehlice",
+      "5 mm"
+     ]
+    ]
+   }
   },
   {
    "name": "Příze DROPS Melody 18 - hořčicová",
@@ -70,7 +121,24 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "",
+    "specs": [
+     [
+      "Složení",
+      "71 % alpaka, 25 % vlna, 4 % polyamid"
+     ],
+     [
+      "Váha / návin",
+      "50 g = cca 140 m"
+     ],
+     [
+      "Jehlice",
+      "7 mm"
+     ]
+    ]
+   }
   },
   {
    "name": "Příze DROPS Flora uni colour 37 - ranní opar",
@@ -88,7 +156,24 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "Hřejivá a příjemná vlněná příze, ideální pro pestrobarevné vyplétané vzory (barvy jdou skvěle k sobě), norské vzory apod",
+    "specs": [
+     [
+      "Složení",
+      "65 % vlna, 35 % alpaka"
+     ],
+     [
+      "Váha / návin",
+      "50 g = cca 210 metrů"
+     ],
+     [
+      "Jehlice",
+      "3 mm"
+     ]
+    ]
+   }
   },
   {
    "name": "Příze Drops Andes uni colour 0100 - smetanová",
@@ -106,7 +191,24 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "Silná dvouvláknová příze kombinující hedvábný vzhled alpaky s tvarovou stálostí vlny. Je ideální pro rychlé pletení na silných jehlicích a vhodná i…",
+    "specs": [
+     [
+      "Složení",
+      "65 % vlna, 35 % alpaka"
+     ],
+     [
+      "Váha / návin",
+      "100 g = cca 96 m"
+     ],
+     [
+      "Jehlice",
+      "9 mm"
+     ]
+    ]
+   }
   },
   {
    "name": "Příze DROPS Soft Tweed mix 20 - pepř a sůl",
@@ -124,7 +226,24 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "Tvídová klasika ze superjemné alpaky a merina",
+    "specs": [
+     [
+      "Složení",
+      "50 % vlna, 25 % alpaka, 25 % viskóza"
+     ],
+     [
+      "Váha / návin",
+      "50 g = cca 130 metrů"
+     ],
+     [
+      "Jehlice",
+      "4 mm"
+     ]
+    ]
+   }
   },
   {
    "name": "Příze Drops Air uni colour 44 - karmínová červená",
@@ -142,7 +261,24 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "Nádherná vzdušná příze tvořená jemnou baby alpakou a příjemným hřejivým merinem",
+    "specs": [
+     [
+      "Složení",
+      "70 % alpaka, 23 % polyamid, 7 % vlna"
+     ],
+     [
+      "Váha / návin",
+      "50 g = cca 150 metrů"
+     ],
+     [
+      "Jehlice",
+      "5 mm"
+     ]
+    ]
+   }
   }
  ],
  "mix": [
@@ -159,7 +295,20 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "",
+    "specs": [
+     [
+      "Složení",
+      "100 % mikropolyester"
+     ],
+     [
+      "Váha / návin",
+      "100 g = cca 9 m"
+     ]
+    ]
+   }
   },
   {
    "name": "Příze Dolphin Baby 80310 - tmavý cyklámen",
@@ -174,7 +323,24 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "Objemná příze určená především k pletení přikrývek pro děti",
+    "specs": [
+     [
+      "Složení",
+      "100 % polyester"
+     ],
+     [
+      "Váha / návin",
+      "100 g = 120 m"
+     ],
+     [
+      "Jehlice",
+      "6,5 mm"
+     ]
+    ]
+   }
   },
   {
    "name": "Twisted macrame 755 - zelená",
@@ -193,7 +359,24 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "Příze určená na drhání, lze rozčesávat",
+    "specs": [
+     [
+      "Složení",
+      "60 % bavlna, 40 % viskóza a polyester"
+     ],
+     [
+      "Váha / návin",
+      "500 g = 210 m"
+     ],
+     [
+      "Jehlice",
+      "9–10 mm"
+     ]
+    ]
+   }
   },
   {
    "name": "Příze Macrame Cotton Spectrum 1327 - béžová, kaštanová, tmavý tyrkys, modrá",
@@ -212,7 +395,24 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "",
+    "specs": [
+     [
+      "Složení",
+      "80 % bavlna, 20 % polyester"
+     ],
+     [
+      "Váha / návin",
+      "250 g = 225 m"
+     ],
+     [
+      "Jehlice",
+      "5 mm"
+     ]
+    ]
+   }
   },
   {
    "name": "Ametyst, kulička fazetovaná 6mm",
@@ -228,7 +428,16 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "Fazetovaná kulička z ametystu",
+    "specs": [
+     [
+      "Průměr",
+      "6 mm"
+     ]
+    ]
+   }
   },
   {
    "name": "Háček Drops Pro Circus 4 - 13 cm",
@@ -243,7 +452,16 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "Hliníkový háček, délka 13 cm",
+    "specs": [
+     [
+      "Velikost",
+      "4 mm"
+     ]
+    ]
+   }
   },
   {
    "name": "Značky na očka - Drops Stitch Markers (30ks)",
@@ -258,7 +476,16 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "Plastové zavírací sponky pro označení řad či oček",
+    "specs": [
+     [
+      "Balení",
+      "30 ks"
+     ]
+    ]
+   }
   },
   {
    "name": "Jehlice ponožkové 5 mm/20 cmDROPS Pro Romance (Birch)",
@@ -276,7 +503,24 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "Hladké a lehké ponožkové jehlice z březového dřeva",
+    "specs": [
+     [
+      "Velikost",
+      "5 mm"
+     ],
+     [
+      "Délka",
+      "20 cm"
+     ],
+     [
+      "Balení",
+      "5 ks"
+     ]
+    ]
+   }
   },
   {
    "name": "Příze Moonlight 8220 - hnědá",
@@ -292,7 +536,24 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "Srovnatelná s přízí Kordonet 10",
+    "specs": [
+     [
+      "Složení",
+      "100 % bavlna"
+     ],
+     [
+      "Váha / návin",
+      "100 g = 550 m"
+     ],
+     [
+      "Háček",
+      "1,5–2,5 mm"
+     ]
+    ]
+   }
   },
   {
    "name": "DROPS Pro Classic Interchangeable Circular Needles Set 3,5-8",
@@ -307,7 +568,16 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "8 párů kruhových jehlic a 4 připojovací lanka",
+    "specs": [
+     [
+      "Velikosti",
+      "3,5–8 mm"
+     ]
+    ]
+   }
   }
  ],
  "cat": [
@@ -327,7 +597,24 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "Přepychová směs počesané alpaky a morušového hedvábí",
+    "specs": [
+     [
+      "Složení",
+      "77 % alpaka, 23 % hedvábí"
+     ],
+     [
+      "Váha / návin",
+      "25 g = cca 140 metrů"
+     ],
+     [
+      "Jehlice",
+      "5 mm"
+     ]
+    ]
+   }
   },
   {
    "name": "Příze DROPS Brushed Alpaca Silk 23 - bordó",
@@ -345,7 +632,24 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "Přepychová směs počesané alpaky a morušového hedvábí",
+    "specs": [
+     [
+      "Složení",
+      "77 % alpaka, 23 % hedvábí"
+     ],
+     [
+      "Váha / návin",
+      "25 g = cca 140 metrů"
+     ],
+     [
+      "Jehlice",
+      "5 mm"
+     ]
+    ]
+   }
   },
   {
    "name": "Příze DROPS Brushed Alpaca Silk 34 - jemná lila",
@@ -363,7 +667,24 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "Přepychová směs počesané alpaky a morušového hedvábí",
+    "specs": [
+     [
+      "Složení",
+      "77 % alpaka, 23 % hedvábí"
+     ],
+     [
+      "Váha / návin",
+      "25 g = cca 140 metrů"
+     ],
+     [
+      "Jehlice",
+      "5 mm"
+     ]
+    ]
+   }
   },
   {
    "name": "Příze DROPS Brushed Alpaca Silk 43 - tmavá grape",
@@ -381,7 +702,24 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "Přepychová směs počesané alpaky a morušového hedvábí",
+    "specs": [
+     [
+      "Složení",
+      "77 % alpaka, 23 % hedvábí"
+     ],
+     [
+      "Váha / návin",
+      "25 g = cca 140 metrů"
+     ],
+     [
+      "Jehlice",
+      "5 mm"
+     ]
+    ]
+   }
   },
   {
    "name": "Příze DROPS Brushed Alpaca Silk 20 - růžový písek",
@@ -399,7 +737,24 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "Přepychová směs počesané alpaky a morušového hedvábí",
+    "specs": [
+     [
+      "Složení",
+      "77 % alpaka, 23 % hedvábí"
+     ],
+     [
+      "Váha / návin",
+      "25 g = cca 140 metrů"
+     ],
+     [
+      "Jehlice",
+      "5 mm"
+     ]
+    ]
+   }
   },
   {
    "name": "Příze DROPS Brushed Alpaca Silk 36 - mandlová",
@@ -417,7 +772,24 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "Přepychová směs počesané alpaky a morušového hedvábí",
+    "specs": [
+     [
+      "Složení",
+      "77 % alpaka, 23 % hedvábí"
+     ],
+     [
+      "Váha / návin",
+      "25 g = cca 140 metrů"
+     ],
+     [
+      "Jehlice",
+      "5 mm"
+     ]
+    ]
+   }
   },
   {
    "name": "Příze DROPS Brushed Alpaca Silk 40 - marcipán",
@@ -435,7 +807,24 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "Přepychová směs počesané alpaky a morušového hedvábí",
+    "specs": [
+     [
+      "Složení",
+      "77 % alpaka, 23 % hedvábí"
+     ],
+     [
+      "Váha / návin",
+      "25 g = cca 140 metrů"
+     ],
+     [
+      "Jehlice",
+      "5 mm"
+     ]
+    ]
+   }
   },
   {
    "name": "Příze DROPS Brushed Alpaca Silk 05 - béžová",
@@ -453,7 +842,24 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "Přepychová směs počesané alpaky a morušového hedvábí",
+    "specs": [
+     [
+      "Složení",
+      "77 % alpaka, 23 % hedvábí"
+     ],
+     [
+      "Váha / návin",
+      "25 g = cca 140 metrů"
+     ],
+     [
+      "Jehlice",
+      "5 mm"
+     ]
+    ]
+   }
   },
   {
    "name": "Příze DROPS Brushed Alpaca Silk 08 – vřesová",
@@ -471,7 +877,24 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "Přepychová směs počesané alpaky a morušového hedvábí",
+    "specs": [
+     [
+      "Složení",
+      "77 % alpaka, 23 % hedvábí"
+     ],
+     [
+      "Váha / návin",
+      "25 g = cca 140 metrů"
+     ],
+     [
+      "Jehlice",
+      "5 mm"
+     ]
+    ]
+   }
   },
   {
    "name": "Příze DROPS Brushed Alpaca Silk 37 - jemná meruňková",
@@ -489,7 +912,24 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "Přepychová směs počesané alpaky a morušového hedvábí",
+    "specs": [
+     [
+      "Složení",
+      "77 % alpaka, 23 % hedvábí"
+     ],
+     [
+      "Váha / návin",
+      "25 g = cca 140 metrů"
+     ],
+     [
+      "Jehlice",
+      "5 mm"
+     ]
+    ]
+   }
   },
   {
    "name": "Příze DROPS Brushed Alpaca Silk 06 - korálová",
@@ -507,7 +947,24 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "Přepychová směs počesané alpaky a morušového hedvábí",
+    "specs": [
+     [
+      "Složení",
+      "77 % alpaka, 23 % hedvábí"
+     ],
+     [
+      "Váha / návin",
+      "25 g = cca 140 metrů"
+     ],
+     [
+      "Jehlice",
+      "5 mm"
+     ]
+    ]
+   }
   },
   {
    "name": "Příze DROPS Brushed Alpaca Silk 41 - pšeničné pole",
@@ -525,7 +982,24 @@
    "size": [
     800,
     600
-   ]
+   ],
+   "info": {
+    "lead": "Přepychová směs počesané alpaky a morušového hedvábí",
+    "specs": [
+     [
+      "Složení",
+      "77 % alpaka, 23 % hedvábí"
+     ],
+     [
+      "Váha / návin",
+      "25 g = cca 140 metrů"
+     ],
+     [
+      "Jehlice",
+      "5 mm"
+     ]
+    ]
+   }
   }
  ]
 }

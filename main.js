@@ -1,43 +1,26 @@
-/* Pletánky.cz – ukázka vzhledu. Lehké vanilla JS, převoditelné do Shoptetu (vlastní JS v patičce). */
+/* Pletánky.cz – ukázka vzhledu, verze 2. Lehké vanilla JS, převoditelné do Shoptetu (vlastní JS v patičce). */
 (function () {
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
   const FREE = 2000;
-  const fmt = n => n.toLocaleString('cs-CZ', { maximumFractionDigits: 2 }) + ' Kč';
+  const fmt = n => n.toLocaleString('cs-CZ', { maximumFractionDigits: 2 }) + ' Kč';
+  const root = document.documentElement;
 
-  /* rozdělení nadpisu na slova pro animaci */
-  $$('[data-split]').forEach(h => {
-    let i = 0;
-    const wrap = node => {
-      [...node.childNodes].forEach(n => {
-        if (n.nodeType === 3) {
-          const frag = document.createDocumentFragment();
-          n.textContent.split(/(\s+)/).forEach(t => {
-            if (!t) return;
-            if (/^\s+$/.test(t)) { frag.append(' '); return; }
-            const w = document.createElement('span'); w.className = 'w';
-            const s = document.createElement('span'); s.textContent = t; s.style.setProperty('--i', i++);
-            w.append(s); frag.append(w);
-          });
-          n.replaceWith(frag);
-        } else if (n.nodeType === 1) wrap(n);
-      });
-    };
-    wrap(h);
-  });
+  /* barevná varianta A / B (jen pro ukázku) */
+  const markTheme = () => $$('[data-theme-set]').forEach(b => b.classList.toggle('is-on', b.dataset.themeSet === root.getAttribute('data-theme')));
+  $$('[data-theme-set]').forEach(b => b.addEventListener('click', () => {
+    root.setAttribute('data-theme', b.dataset.themeSet);
+    try { localStorage.setItem('pl-barvy', b.dataset.themeSet); } catch (e) {}
+    markTheme();
+  }));
+  markTheme();
 
-  /* hlavička při scrollu */
+  /* stín hlavičky při scrollu */
   const hdr = $('#hdr');
   const sentinel = document.createElement('div');
-  sentinel.style.cssText = 'position:absolute;top:120px;height:1px;width:1px';
+  sentinel.style.cssText = 'position:absolute;top:140px;height:1px;width:1px';
   document.body.prepend(sentinel);
   new IntersectionObserver(([e]) => hdr.classList.toggle('is-stuck', !e.isIntersecting)).observe(sentinel);
-
-  /* odhalování při scrollu */
-  const io = new IntersectionObserver(es => es.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
-  }), { rootMargin: '0px 0px -8% 0px' });
-  $$('.reveal').forEach((el, i) => { el.style.transitionDelay = (i % 4) * 70 + 'ms'; io.observe(el); });
 
   /* šuplíky */
   const drawers = { menu: $('[data-menu]'), cart: $('[data-cart]'), about: $('[data-about]') };
@@ -64,12 +47,12 @@
     $$('[data-cart-count]').forEach(el => el.textContent = count);
     $$('[data-cart-total]').forEach(el => el.textContent = fmt(total));
     const left = Math.max(0, FREE - total);
-    $('[data-free-txt]').innerHTML = left > 0 ? `Do dopravy zdarma zbývá <b>${fmt(left)}</b>` : '<b>Máte dopravu zdarma!</b> 🎉';
+    $('[data-free-txt]').innerHTML = left > 0 ? `Do dopravy zdarma zbývá <b>${fmt(left)}</b>` : '<b>Máte dopravu zdarma.</b>';
     $('[data-free-bar]').style.width = Math.min(100, total / FREE * 100) + '%';
     const list = $('[data-cart-list]');
     list.innerHTML = cart.length ? cart.map(i => `<li class="ci"><img src="${i.img}" alt=""><span><b>${i.name}</b><small>${i.qty} × ${fmt(i.price)}</small></span><strong>${fmt(i.price * i.qty)}</strong></li>`).join('')
-      : '<li class="cartlist__empty">Košík je zatím prázdný. Přidejte si první klubíčko 🧶</li>';
-    sessionStorage.setItem('pl-cart', JSON.stringify(cart));
+      : '<li class="cartlist__empty">Košík je zatím prázdný.</li>';
+    try { sessionStorage.setItem('pl-cart', JSON.stringify(cart)); } catch (e) {}
   };
   const toast = $('[data-toast]'); let tt;
   $$('[data-add]').forEach(b => b.addEventListener('click', () => {
@@ -78,10 +61,9 @@
     const it = cart.find(i => i.name === b.dataset.name);
     if (it) it.qty += qty; else cart.push({ name: b.dataset.name, price: +b.dataset.price, img: b.dataset.img, qty });
     render();
-    const cb = $('.cartbtn'); cb.classList.remove('is-bump'); void cb.offsetWidth; cb.classList.add('is-bump');
-    if (b.classList.contains('pcard__add')) { b.classList.add('is-done'); setTimeout(() => b.classList.remove('is-done'), 1400); }
+    b.classList.add('is-done'); setTimeout(() => b.classList.remove('is-done'), 1400);
     toast.textContent = 'Přidáno do košíku';
-    toast.classList.add('is-on'); clearTimeout(tt); tt = setTimeout(() => toast.classList.remove('is-on'), 2600);
+    toast.classList.add('is-on'); clearTimeout(tt); tt = setTimeout(() => toast.classList.remove('is-on'), 2400);
   }));
   render();
 
@@ -90,17 +72,9 @@
     const i = $('[data-qty-input]'); i.value = Math.max(1, (parseInt(i.value, 10) || 1) + +b.dataset.qty);
   }));
 
-  /* slidery produktů */
-  $$('[data-rail]').forEach(r => {
-    const sec = r.closest('section');
-    const step = () => r.querySelector('.pcard').offsetWidth + 20;
-    $('[data-rail-next]', sec)?.addEventListener('click', () => r.scrollBy({ left: step() * 2, behavior: 'smooth' }));
-    $('[data-rail-prev]', sec)?.addEventListener('click', () => r.scrollBy({ left: -step() * 2, behavior: 'smooth' }));
-  });
-
-  /* záložky na detailu */
+  /* záložky (detail produktu, recenze) */
   $$('[data-tabs]').forEach(t => {
-    const btns = $$('[data-tab]', t), panels = $$('.tabs__panel', t);
+    const btns = $$('[data-tab]', t), panels = $$(':scope > .tabs__panel', t);
     btns.forEach((b, i) => b.addEventListener('click', () => {
       btns.forEach(x => x.classList.toggle('is-on', x === b));
       panels.forEach((p, j) => p.classList.toggle('is-on', j === i));
