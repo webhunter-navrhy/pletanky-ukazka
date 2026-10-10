@@ -210,12 +210,12 @@ def cart_drawer():
 def demo_panel():
     """Přepínač barevných variant + informace o ukázce (není součást e-shopu)."""
     return f'''<div class="demo" role="region" aria-label="Ovládání ukázky">
-  <span class="demo__l">{ico("palette","ico ico--sm")}<span>Nezávazná ukázka, verze 3</span></span>
+  <span class="demo__l">{ico("palette","ico ico--sm")}<span>Nezávazná ukázka, verze 4</span></span>
   <button type="button" class="demo__info" data-about-open aria-label="O ukázce">{ico("info","ico ico--sm")}<span>O ukázce</span></button>
 </div>
 <div class="drawer drawer--about" data-about aria-hidden="true">
   <div class="drawer__panel">
-    <div class="drawer__head"><b>Nezávazná ukázka, verze 3</b><button type="button" data-about-close aria-label="Zavřít">{ico("close")}</button></div>
+    <div class="drawer__head"><b>Nezávazná ukázka, verze 4</b><button type="button" data-about-close aria-label="Zavřít">{ico("close")}</button></div>
     <div class="about">
       <p>Upravená ukázka vzhledu e-shopu <b>Pletánky.cz</b> od Studentských Webů podle Vaší zpětné vazby.</p>
       <ul>
