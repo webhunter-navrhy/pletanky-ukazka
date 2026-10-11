@@ -273,6 +273,9 @@ def page(title, body, active="", cls="", desc="Nezávazná ukázka vzhledu e-sho
 <meta name="robots" content="noindex, nofollow">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
+<meta property="og:image" content="https://webhunter-navrhy.github.io/pletanky-ukazka/img/v2/hero.jpg">
+<meta property="og:title" content="{e(title)}">
+<script type="application/ld+json">{{"@context":"https://schema.org","@type":"Store","name":"Pletánky.cz","url":"https://www.pletanky.cz","description":"Příze, háčkování, macramé, korálky a bižuterní komponenty"}}</script>
 {THEME_JS}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

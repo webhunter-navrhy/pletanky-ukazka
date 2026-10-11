@@ -591,4 +591,5 @@ button{cursor:pointer;background:none;border:0;padding:0}
 .mega__main .mega__h{margin-bottom:14px}
 .demo__sw--d{background:linear-gradient(135deg,#5e2a50 50%,#5e2a50 50%)}
 .demo__sw--e{background:linear-gradient(135deg,#7a1f35 50%,#7a1f35 50%)}
-@media (max-width:1100px){.nav__a{font-size:13px;padding:8px 8px}}
+@media (max-width:1360px){.nav__a{font-size:13.5px;letter-spacing:.02em;padding:8px 6px;gap:3px}.nav__a::after{left:6px;right:6px}.nav__a .ico--xs{width:11px;height:11px}}
+@media (max-width:1100px){.nav__ul{flex-wrap:wrap;height:auto;padding:4px 0;row-gap:0}.nav__li{height:40px}}
