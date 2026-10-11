@@ -113,38 +113,45 @@ NAV = [
     ("Značky", "kategorie.html", False),
 ]
 
-MEGA = '''<div class="mega" role="region" aria-label="Příze na pletení">
+def _mt(label, img):
+    return f'<a class="mega__t" href="kategorie.html"><span class="mega__ti"><img src="{img}" alt="" loading="lazy"></span><span>{label}</span></a>'
+
+
+MEGAS = {
+    "Příze na pletení": ("Podle složení", [("Alpaka", "img/p/prize-drops-brushed-alpaca-silk-44-svestka.jpg"), ("Merino a vlna", "img/p/prize-drops-andes-uni-colour-0100-smetanova.jpg"),
+        ("Moherové příze", "img/photo/moher.jpg"), ("Bavlna", "img/p/prize-drops-flora-uni-colour-37-ranni-opar.jpg"), ("Akryl a směsi", "img/photo/ruzova-klubka.jpg")],
+        "Podle síly příze", ["A jemné", "B slabší", "C střední", "D silnější", "E silné", "F velmi silné"]),
+    "Háčkovací příze": ("Druhy", [("Kordonety", "img/photo/kordonet.jpg"), ("Moonlight", "img/p/prize-moonlight-8220-hneda.jpg"), ("Bavlna na háčkování", "img/p/prize-dolphin-baby-80310-tmavy-cyklamen.jpg"), ("Na amigurumi", "img/v2/proj-amigurumi.jpg")], None, None),
+    "Špagáty a macramé": ("Druhy", [("Šňůry a cordy", "img/photo/macrame-snura.jpg"), ("Twisted macramé", "img/p/twisted-macrame-755-zelena.jpg"), ("Macramé bavlna", "img/p/prize-macrame-cotton-spectrum-1327-bezova-kastanova-tmavy-ty.jpg")], None, None),
+    "Pomůcky": ("Druhy", [("Jehlice", "img/photo/jehlice.jpg"), ("Háčky", "img/p/hacek-drops-pro-circus-4-13-cm.jpg"), ("Značky na očka", "img/p/znacky-na-ocka-drops-stitch-markers-30ks.jpg"), ("Sady jehlic", "img/p/drops-pro-classic-interchangeable-circular-needles-set-3-5-8.jpg")], None, None),
+    "Korálky": ("Druhy", [("Ohňovky", "img/photo/koralky.jpg"), ("Mačkané", "img/photo/koralky.jpg"), ("Dřevěné", "img/photo/koralky.jpg")], None, None),
+    "Kameny a minerály": ("Druhy", [("Ametyst", "img/p/ametyst-kulicka-fazetovana-6mm.jpg"), ("Achát", "img/photo/kameny.jpg"), ("Všechny kameny", "img/photo/kameny.jpg")], None, None),
+    "Bižuterní komponenty": ("Druhy", [("Kaplíky", "img/photo/komponenty.jpg"), ("Kaloty", "img/photo/komponenty.jpg"), ("Zapínání", "img/photo/komponenty.jpg")], None, None),
+    "Značky": ("Značky", [("DROPS", "img/p/prize-drops-brushed-alpaca-silk-23-bordo.jpg"), ("Alize", "img/p/alize-puffy-310-bezova.jpg"), ("YarnArt", "img/p/prize-dolphin-baby-80310-tmavy-cyklamen.jpg"), ("Himalaya", "img/photo/ruzova-klubka.jpg"), ("Pletánky", "img/photo/klubko.jpg")],
+        "DROPS příze", ["Brushed Alpaca Silk", "Sky", "Melody", "Air", "Flora", "Soft Tweed", "Nepal", "Alpaca", "Andes"]),
+}
+
+
+def mega(name):
+    h, tiles, h2, links = MEGAS[name]
+    side = ""
+    if links:
+        side = f'<div class="mega__col"><p class="mega__h">{h2}</p>' + "".join(f'<a href="kategorie.html">{l}</a>' for l in links) + '</div>'
+    t = "".join(_mt(l, i) for l, i in tiles)
+    return f'''<div class="mega" role="region" aria-label="{name}">
   <div class="mega__in wrap">
-    <div class="mega__col">
-      <p class="mega__h">DROPS</p>
-      <a href="kategorie.html">Brushed Alpaca Silk</a><a href="kategorie.html">Sky</a><a href="kategorie.html">Melody</a>
-      <a href="kategorie.html">Air</a><a href="kategorie.html">Flora</a><a href="kategorie.html">Soft Tweed</a>
-      <a href="kategorie.html">Nepal</a><a href="kategorie.html">Alpaca</a><a href="kategorie.html">Andes</a>
-    </div>
-    <div class="mega__col">
-      <p class="mega__h">Podle složení</p>
-      <a href="kategorie.html">Alpaka</a><a href="kategorie.html">Merino a vlna</a><a href="kategorie.html">Moherové příze</a>
-      <a href="kategorie.html">Bavlna</a><a href="kategorie.html">Akryl a směsi</a>
-    </div>
-    <div class="mega__col">
-      <p class="mega__h">Další značky</p>
-      <a href="kategorie.html">Alize</a><a href="kategorie.html">YarnArt</a><a href="kategorie.html">Himalaya</a>
-      <a href="kategorie.html">Vlna Hep</a><a href="kategorie.html">Pletánky</a>
-    </div>
-    <a class="mega__promo" href="kategorie.html">
-      <img src="img/photo/moher.jpg" alt="">
-      <span><small>Akce</small>Příze DROPS až −30&nbsp;%</span>
-    </a>
+    <div class="mega__main"><p class="mega__h">{h}</p><div class="mega__tiles">{t}</div></div>
+    {side}
   </div>
 </div>'''
 
 
 def header(active=""):
     links = ""
-    for name, href, mega in NAV:
+    for name, href, _m in NAV:
         cls = "nav__a" + (" is-active" if name == active else "")
-        if mega:
-            links += f'<li class="nav__li has-mega"><a class="{cls}" href="{href}">{name}{ico("down","ico ico--xs")}</a>{MEGA}</li>'
+        if name in MEGAS:
+            links += f'<li class="nav__li has-mega"><a class="{cls}" href="{href}">{name}{ico("down","ico ico--xs")}</a>{mega(name)}</li>'
         else:
             links += f'<li class="nav__li"><a class="{cls}" href="{href}">{name}</a></li>'
     links += '<li class="nav__li"><a class="nav__a nav__a--akce" href="kategorie.html">Akce</a></li>'
@@ -210,19 +217,21 @@ def cart_drawer():
 def demo_panel():
     """Přepínač barevných variant + informace o ukázce (není součást e-shopu)."""
     return f'''<div class="demo" role="region" aria-label="Ovládání ukázky">
-  <span class="demo__l">{ico("palette","ico ico--sm")}<span>Nezávazná ukázka, verze 4</span></span>
+  <span class="demo__l">{ico("palette","ico ico--sm")}<span>Nezávazná ukázka, verze 5</span></span>
+  <button type="button" class="demo__b" data-theme-set="d" aria-label="Fialová varianta"><i class="demo__sw demo__sw--d"></i><span>Fialová</span></button>
+  <button type="button" class="demo__b" data-theme-set="e" aria-label="Červená varianta"><i class="demo__sw demo__sw--e"></i><span>Červená</span></button>
   <button type="button" class="demo__info" data-about-open aria-label="O ukázce">{ico("info","ico ico--sm")}<span>O ukázce</span></button>
 </div>
 <div class="drawer drawer--about" data-about aria-hidden="true">
   <div class="drawer__panel">
-    <div class="drawer__head"><b>Nezávazná ukázka, verze 4</b><button type="button" data-about-close aria-label="Zavřít">{ico("close")}</button></div>
+    <div class="drawer__head"><b>Nezávazná ukázka, verze 5</b><button type="button" data-about-close aria-label="Zavřít">{ico("close")}</button></div>
     <div class="about">
       <p>Upravená ukázka vzhledu e-shopu <b>Pletánky.cz</b> od Studentských Webů podle Vaší zpětné vazby.</p>
       <ul>
-        <li>Světlá varianta se zlatými tlačítky, horní a spodní lišta je bordó.</li>
-        <li>Logo je vlevo, vyhledávání uprostřed. Oblíbené kategorie mají původní rozložení, rohy jsou ostré.</li>
+        <li>Barvy: lišty i drobné detaily (tlačítka, akce, ceny) mají vždy stejný odstín. Dole je přepínač: fialová (odstín původních lišt) a červená (odstín dosavadních akcentů).</li>
+        <li>Logo je vlevo, vyhledávání uprostřed. Oblíbené kategorie mají původní rozložení, rohy tlačítek a fotek jsou jemně zaoblené.</li>
         <li>Sekce „Krása podzimu“ je prostor pro téma měsíce a doporučené produkty, její název i výběr se dá měnit. Odstín měsíce je v banneru jako malý rámeček.</li>
-        <li>Jedno písmo pro všechny nadpisy i názvy, u každé sekce jeden nadpis, ostré rohy a sekce oddělené jemnou linkou.</li>
+        <li>Jedno písmo pro všechny nadpisy i názvy, u každé sekce jeden nadpis, jemně zaoblené rohy a sekce oddělené jemnou linkou.</li>
         <li>Najeďte myší na produkt: rozbalí se složení, návin, jehlice a tlačítko do košíku.</li>
         <li>Recenze jsou skutečná hodnocení z Vaší stránky Hodnocení obchodu (stav 10.&nbsp;10.&nbsp;2026). Komentáře k produktům jsou jen ilustrační místa.</li>
         <li>Názvy, ceny a údaje produktů jsou z pletanky.cz. Fotky v banneru, u projektů a v blogu jsou ilustrační (volně použitelné z Pexels), nahradí je Vaše vlastní. Logo je zatím zástupné.</li>
@@ -250,14 +259,14 @@ def footer():
 </footer>'''
 
 
-THEME_JS = "<script>document.documentElement.setAttribute('data-theme','c');if(new URLSearchParams(location.search).has('nahled'))document.documentElement.classList.add('is-preview')</script>"
+THEME_JS = "<script>(function(){var q=new URLSearchParams(location.search).get('barvy'),t=(q==='e'||q==='d')?q:(sessionStorage.getItem('pl-theme')||'d');document.documentElement.setAttribute('data-theme',t)})();if(new URLSearchParams(location.search).has('nahled'))document.documentElement.classList.add('is-preview')</script>"
 
 FONTS = '<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap&subset=latin-ext" rel="stylesheet">'
 
 
 def page(title, body, active="", cls="", desc="Nezávazná ukázka vzhledu e-shopu Pletánky.cz"):
     return f'''<!doctype html>
-<html lang="cs" data-theme="c">
+<html lang="cs" data-theme="d">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -325,10 +334,6 @@ def projects():
   <div class="wrap">
     {sechead("Vyberte podle projektu")}
     <div class="projs">{p}</div>
-    <div class="chiprows">
-      <div class="chiprow"><span class="chiprow__l">Podle složení</span>{c}</div>
-      <div class="chiprow"><span class="chiprow__l">Podle síly (skupiny DROPS)</span>{w}</div>
-    </div>
   </div>
 </section>'''
 

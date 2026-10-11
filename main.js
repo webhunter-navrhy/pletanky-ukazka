@@ -1,4 +1,4 @@
-/* Pletánky.cz – ukázka vzhledu, verze 3. Lehké vanilla JS, převoditelné do Shoptetu (vlastní JS v patičce). */
+/* Pletánky.cz – ukázka vzhledu, verze 5. Lehké vanilla JS, převoditelné do Shoptetu (vlastní JS v patičce). */
 (function () {
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
@@ -81,4 +81,13 @@
 
   /* řazení – jen přepínání stavu */
   $$('.sort button').forEach(b => b.addEventListener('click', () => $$('.sort button').forEach(x => x.classList.toggle('is-on', x === b))));
+
+  /* přepínač barevných variant (fialová / červená) */
+  const setTheme = t => {
+    root.setAttribute('data-theme', t);
+    try { sessionStorage.setItem('pl-theme', t); } catch (e) {}
+    $$('[data-theme-set]').forEach(b => b.classList.toggle('is-on', b.dataset.themeSet === t));
+  };
+  $$('[data-theme-set]').forEach(b => b.addEventListener('click', () => setTheme(b.dataset.themeSet)));
+  setTheme(root.getAttribute('data-theme'));
 })();
