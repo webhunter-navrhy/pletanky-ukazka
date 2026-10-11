@@ -568,7 +568,7 @@ button{cursor:pointer;background:none;border:0;padding:0}
 @media (max-width:560px){.tiles--orig{grid-auto-rows:160px;gap:12px}.tiles--orig .t--big{grid-column:span 2;grid-row:span 1}}
 
 /* ---------- verze 5: zaoblené rohy, větší menu, obrázky v menu, sjednocené barvy ---------- */
-[data-theme="d"]{--accent:#5e2a50;--accent-h:#4a1f3e;--mark:#5e2a50;--star:#5e2a50;--top-bg:#5e2a50;--ftr-bg:#5e2a50}
+[data-theme="d"]{--news-bg:#5e2a50;--accent:#5e2a50;--accent-h:#4a1f3e;--mark:#5e2a50;--star:#5e2a50;--top-bg:#5e2a50;--ftr-bg:#5e2a50}
 [data-theme="e"]{--accent:#7a1f35;--accent-h:#5e1527;--mark:#7a1f35;--star:#7a1f35;--top-bg:#7a1f35;--ftr-bg:#7a1f35;--news-bg:#7a1f35}
 [data-theme="d"],[data-theme="e"]{--top-ink:#fff;--ftr-ink:#f6ece2;--ftr-line:rgba(255,255,255,.22)}
 [data-theme="d"] .ftr__soc a:hover,[data-theme="e"] .ftr__soc a:hover{background:#fff;color:var(--accent)}
@@ -593,3 +593,12 @@ button{cursor:pointer;background:none;border:0;padding:0}
 .demo__sw--e{background:linear-gradient(135deg,#7a1f35 50%,#7a1f35 50%)}
 @media (max-width:1360px){.nav__a{font-size:13.5px;letter-spacing:.02em;padding:8px 6px;gap:3px}.nav__a::after{left:6px;right:6px}.nav__a .ico--xs{width:11px;height:11px}}
 @media (max-width:1100px){.nav__ul{flex-wrap:wrap;height:auto;padding:4px 0;row-gap:0}.nav__li{height:40px}}
+
+.news__form{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.7)}
+.news__form input::placeholder{opacity:.85}
+@media (max-width:760px){
+  .hdr__act,.hdr__burger{min-width:44px;min-height:44px;justify-content:center}
+  .search{height:44px}.search input{height:42px}
+  .logo{min-height:44px;justify-content:center}
+  .cart__x,.drawer__head button{min-width:44px;min-height:44px}
+}

@@ -452,7 +452,7 @@ home_body = f'''
 <section class="sec">
   <div class="wrap">
     {sechead("Krása podzimu")}
-    <p class="sec__lead">Téma měsíce: tipy a doporučené produkty k nákupu. Název sekce i výběr produktů si budete měnit podle potřeby.</p>
+    <p class="sec__lead">Téma měsíce: tipy a doporučené produkty k nákupu.</p>
     <div class="pgrid">{"".join(card(p) for p in P["mix"][4:8])}</div>
     <p class="sec__more"><a class="btn btn--line" href="kategorie.html">Všechny tipy</a></p>
   </div>
