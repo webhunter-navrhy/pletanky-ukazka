@@ -665,3 +665,32 @@ body{padding-bottom:64px}
   .demo__b,.demo__info{width:44px;min-width:44px;padding:0;justify-content:center}
   .demo__l{display:none}
 }
+
+/* ---------- verze 7: banner a prohlášení à la Rubín, ostré obrázky + zaoblená tlačítka, boční menu, platební metody ---------- */
+.banner__box{background:transparent;border:0;padding:0;max-width:600px;border-radius:0}
+.banner::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(255,255,255,.88) 0%,rgba(255,255,255,.7) 38%,rgba(255,255,255,0) 68%)}
+.banner__in{z-index:2}
+.banner__box p{color:#3d3338}
+.usp{border-bottom:0;background:#fff;padding:34px 0 8px}
+.usp__in span+span{border-left:0}
+.usp__in span{flex-direction:column;gap:14px;padding:12px 14px;font-size:15px;font-weight:500;letter-spacing:.02em;text-transform:none;color:var(--ink);cursor:default}
+.usp .ico{width:30px;height:30px;box-sizing:content-box;padding:20px;border-radius:50%;background:#f3e9ee;color:var(--accent);transition:background .3s,color .3s,transform .3s}
+.usp__in span:hover .ico,.usp__in span:focus-within .ico{background:var(--accent);color:#fff;transform:translateY(-3px)}
+/* ostré rohy obrázků, zaoblená tlačítka a štítky */
+.tile,.proj__img,.mega__promo,.mega__ti,.cmp__frame,.tiles--mosaic,.edit__img,.pc__img,.pc img,.pd__img,.pd__gal img,.post img,.rev img,.ig img,.ig a,.motm-mini img,.banner__img{border-radius:0}
+.btn,.chip,.search,.news__form,.motm-mini,.tile__box,.edit__img span{border-radius:999px}
+.tile__box{border-radius:22px}
+.edit__img span{border-radius:22px}
+.ftr__pay li.pay{border-radius:6px;background:#fff;color:#333;font-weight:600;padding:6px 14px;letter-spacing:.02em;border:0}
+.pay--gopay{color:#1f6fe0!important;font-style:italic}
+.pay--visa{color:#1a1f71!important;font-style:italic;font-weight:800!important;letter-spacing:.06em!important}
+.pay--mc{gap:0!important;font-size:12px}
+.pay--mc i{width:16px;height:16px;border-radius:50%;background:#eb001b;display:inline-block}
+.pay--mc i+i{background:#f79e1b;margin-left:-6px;margin-right:6px;opacity:.9}
+/* boční menu */
+.fgroup--menu{display:none}
+.fgroup--menu a{display:block;padding:8px 0;font-size:15px;border-bottom:1px solid var(--line)}
+.fgroup--menu a:hover{color:var(--accent)}
+.has-sidemenu .fgroup--menu{display:block}
+@media (max-width:760px){.banner::before{display:none}.banner__box{background:#fff;padding:24px 20px}.usp .ico{padding:14px}}
+@media (max-width:760px){.usp__in span{font-size:12.5px;letter-spacing:0;padding:10px 6px;overflow-wrap:anywhere;hyphens:auto}.usp .ico{padding:12px;width:24px;height:24px}}

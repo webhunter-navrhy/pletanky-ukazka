@@ -13,8 +13,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap&subset=latin-ext" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=b2d235be">
-<script src="main.js?v=becf53c6" defer></script>
+<link rel="stylesheet" href="style.css?v=14005e95">
+<script src="main.js?v=018f296c" defer></script>
 </head>
 <body class="">
 <a class="skip" href="#obsah">Přejít na obsah</a>
@@ -115,6 +115,7 @@
   <div class="wrap cbody__in">
     <aside class="filters" data-filters>
   <div class="filters__head"><b>Filtrovat</b><button type="button" data-filters-close aria-label="Zavřít"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
+  <div class="fgroup fgroup--menu"><p class="fgroup__h">Kategorie</p><a href="kategorie.html">Příze DROPS</a><a href="kategorie.html">Příze Alize</a><a href="kategorie.html">Příze YarnArt</a><a href="kategorie.html">Macramé a šňůry</a><a href="kategorie.html">Korálky a kameny</a><a href="kategorie.html">Bižuterní komponenty</a><a href="kategorie.html">Háčky a jehlice</a></div>
   <div class="fgroup"><p class="fgroup__h">Dostupnost</p><label class="chk"><input type="checkbox" checked><span></span>Skladem <em>43</em></label><label class="chk"><input type="checkbox"><span></span>V akci <em>43</em></label></div>
   <div class="fgroup"><p class="fgroup__h">Cena</p><div class="range"><i style="left:0;right:0"></i><b style="left:0"></b><b style="right:0"></b></div><p class="range__v"><span>57 Kč</span><span>57 Kč</span></p></div>
   <div class="fgroup"><p class="fgroup__h">Barva</p><div class="sws"><button class="sw" type="button" style="--c:#5b2340" aria-label="odstín 44"></button><button class="sw" type="button" style="--c:#7a1f2c" aria-label="odstín 23"></button><button class="sw" type="button" style="--c:#d9cbe3" aria-label="odstín 34"></button><button class="sw" type="button" style="--c:#3a1d2c" aria-label="odstín 43"></button><button class="sw" type="button" style="--c:#e8cfc6" aria-label="odstín 20"></button><button class="sw" type="button" style="--c:#b4875a" aria-label="odstín 36"></button><button class="sw" type="button" style="--c:#efe3d6" aria-label="odstín 40"></button><button class="sw" type="button" style="--c:#9b8670" aria-label="odstín 05"></button><button class="sw" type="button" style="--c:#b45a85" aria-label="odstín 08"></button><button class="sw" type="button" style="--c:#f6c6a0" aria-label="odstín 37"></button><button class="sw" type="button" style="--c:#ef6a5c" aria-label="odstín 06"></button><button class="sw" type="button" style="--c:#c7a12a" aria-label="odstín 41"></button></div></div>
@@ -312,9 +313,9 @@
     </div>
     <div><p class="ftr__h">O nás</p><a href="#">O nás</a><a href="#">Inspirujte se na blogu</a><a href="#">Kontakty</a></div>
     <div><p class="ftr__h">Nakupování</p><a href="#">Doprava a platby</a><a href="#">Obchodní podmínky</a><a href="#">Ochrana osobních údajů</a><a href="#">Hodnocení obchodu</a></div>
-    <div class="ftr__contact"><p class="ftr__h">Kontakt</p><a href="#">info@pletanky.cz</a><span>Pletánky.cz<br>adresa skladu (doplníme)</span></div>
+    <div class="ftr__contact"><p class="ftr__h">Kontakt</p><a href="#">info@pletanky.cz</a><span>Pletánky.cz<br>Provozovna a sklad: Přáslavice 197, 783 54</span></div>
   </div>
-  <div class="wrap ftr__pay"><span class="ftr__h">Platební metody</span><ul><li><svg class="ico ico--sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="6" width="17" height="12" rx="2"/><path d="M3.5 10h17"/></svg> Platební karta</li><li>Apple Pay</li><li>Google Pay</li><li>Bankovní převod</li><li>Dobírka</li></ul></div>
+  <div class="wrap ftr__pay"><span class="ftr__h">Platební metody</span><ul class="payl"><li class="pay pay--gopay">GoPay</li><li class="pay pay--visa">VISA</li><li class="pay pay--mc"><i></i><i></i>Mastercard</li><li class="pay">Apple Pay</li><li class="pay">Google Pay</li></ul></div>
   <div class="wrap ftr__bottom"><span>© Pletánky.cz</span><span>Nezávazná ukázka vzhledu · Studentské Weby</span></div>
 </footer>
 <div class="drawer drawer--menu" data-menu aria-hidden="true">
@@ -338,14 +339,15 @@
 </div>
 <div class="toast" data-toast role="status" aria-live="polite"></div>
 <div class="demo" role="region" aria-label="Ovládání ukázky">
-  <span class="demo__l"><svg class="ico ico--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4a8 8 0 1 0 0 16c1.2 0 1.8-.8 1.8-1.7 0-1.3-1-1.5-1-2.6 0-1 .8-1.7 1.8-1.7H17a3 3 0 0 0 3-3C20 7 16.4 4 12 4z"/><circle cx="8" cy="11" r="1"/><circle cx="10.5" cy="7.8" r="1"/><circle cx="14.5" cy="8" r="1"/></svg><span>Nezávazná ukázka, verze 6</span></span>
+  <span class="demo__l"><svg class="ico ico--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4a8 8 0 1 0 0 16c1.2 0 1.8-.8 1.8-1.7 0-1.3-1-1.5-1-2.6 0-1 .8-1.7 1.8-1.7H17a3 3 0 0 0 3-3C20 7 16.4 4 12 4z"/><circle cx="8" cy="11" r="1"/><circle cx="10.5" cy="7.8" r="1"/><circle cx="14.5" cy="8" r="1"/></svg><span>Nezávazná ukázka, verze 7</span></span>
   <button type="button" class="demo__b" data-theme-set="d" aria-label="Fialová varianta"><i class="demo__sw demo__sw--d"></i><span>Fialová</span></button>
   <button type="button" class="demo__b" data-theme-set="e" aria-label="Červená varianta"><i class="demo__sw demo__sw--e"></i><span>Červená</span></button>
+  <button type="button" class="demo__b" data-sidemenu aria-pressed="false"><i class="demo__sw"></i><span>Boční menu</span></button>
   <button type="button" class="demo__info" data-about-open aria-label="O ukázce"><svg class="ico ico--sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5M12 7.8v.4"/></svg><span>O ukázce</span></button>
 </div>
 <div class="drawer drawer--about" data-about aria-hidden="true">
   <div class="drawer__panel">
-    <div class="drawer__head"><b>Nezávazná ukázka, verze 6</b><button type="button" data-about-close aria-label="Zavřít"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
+    <div class="drawer__head"><b>Nezávazná ukázka, verze 7</b><button type="button" data-about-close aria-label="Zavřít"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
     <div class="about">
       <p>Upravená ukázka vzhledu e-shopu <b>Pletánky.cz</b> od Studentských Webů podle Vaší zpětné vazby.</p>
       <ul>

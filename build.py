@@ -220,14 +220,15 @@ def cart_drawer():
 def demo_panel():
     """Přepínač barevných variant + informace o ukázce (není součást e-shopu)."""
     return f'''<div class="demo" role="region" aria-label="Ovládání ukázky">
-  <span class="demo__l">{ico("palette","ico ico--sm")}<span>Nezávazná ukázka, verze 6</span></span>
+  <span class="demo__l">{ico("palette","ico ico--sm")}<span>Nezávazná ukázka, verze 7</span></span>
   <button type="button" class="demo__b" data-theme-set="d" aria-label="Fialová varianta"><i class="demo__sw demo__sw--d"></i><span>Fialová</span></button>
   <button type="button" class="demo__b" data-theme-set="e" aria-label="Červená varianta"><i class="demo__sw demo__sw--e"></i><span>Červená</span></button>
+  <button type="button" class="demo__b" data-sidemenu aria-pressed="false"><i class="demo__sw"></i><span>Boční menu</span></button>
   <button type="button" class="demo__info" data-about-open aria-label="O ukázce">{ico("info","ico ico--sm")}<span>O ukázce</span></button>
 </div>
 <div class="drawer drawer--about" data-about aria-hidden="true">
   <div class="drawer__panel">
-    <div class="drawer__head"><b>Nezávazná ukázka, verze 6</b><button type="button" data-about-close aria-label="Zavřít">{ico("close")}</button></div>
+    <div class="drawer__head"><b>Nezávazná ukázka, verze 7</b><button type="button" data-about-close aria-label="Zavřít">{ico("close")}</button></div>
     <div class="about">
       <p>Upravená ukázka vzhledu e-shopu <b>Pletánky.cz</b> od Studentských Webů podle Vaší zpětné vazby.</p>
       <ul>
@@ -256,9 +257,9 @@ def footer():
     </div>
     <div><p class="ftr__h">O nás</p><a href="#">O nás</a><a href="#">Inspirujte se na blogu</a><a href="#">Kontakty</a></div>
     <div><p class="ftr__h">Nakupování</p><a href="#">Doprava a platby</a><a href="#">Obchodní podmínky</a><a href="#">Ochrana osobních údajů</a><a href="#">Hodnocení obchodu</a></div>
-    <div class="ftr__contact"><p class="ftr__h">Kontakt</p><a href="#">info@pletanky.cz</a><span>Pletánky.cz<br>adresa skladu (doplníme)</span></div>
+    <div class="ftr__contact"><p class="ftr__h">Kontakt</p><a href="#">info@pletanky.cz</a><span>Pletánky.cz<br>Provozovna a sklad: Přáslavice 197, 783 54</span></div>
   </div>
-  <div class="wrap ftr__pay"><span class="ftr__h">Platební metody</span><ul><li>{ico("card","ico ico--sm")} Platební karta</li><li>Apple Pay</li><li>Google Pay</li><li>Bankovní převod</li><li>Dobírka</li></ul></div>
+  <div class="wrap ftr__pay"><span class="ftr__h">Platební metody</span><ul class="payl"><li class="pay pay--gopay">GoPay</li><li class="pay pay--visa">VISA</li><li class="pay pay--mc"><i></i><i></i>Mastercard</li><li class="pay">Apple Pay</li><li class="pay">Google Pay</li></ul></div>
   <div class="wrap ftr__bottom"><span>© Pletánky.cz</span><span>Nezávazná ukázka vzhledu · Studentské Weby</span></div>
 </footer>'''
 
@@ -493,6 +494,7 @@ def filters():
     sw = "".join(f'<button class="sw" type="button" style="--c:{c}" aria-label="odstín {k}"></button>' for k, c in SWATCH.items())
     return f'''<aside class="filters" data-filters>
   <div class="filters__head"><b>Filtrovat</b><button type="button" data-filters-close aria-label="Zavřít">{ico("close")}</button></div>
+  <div class="fgroup fgroup--menu"><p class="fgroup__h">Kategorie</p><a href="kategorie.html">Příze DROPS</a><a href="kategorie.html">Příze Alize</a><a href="kategorie.html">Příze YarnArt</a><a href="kategorie.html">Macramé a šňůry</a><a href="kategorie.html">Korálky a kameny</a><a href="kategorie.html">Bižuterní komponenty</a><a href="kategorie.html">Háčky a jehlice</a></div>
   <div class="fgroup"><p class="fgroup__h">Dostupnost</p><label class="chk"><input type="checkbox" checked><span></span>Skladem <em>43</em></label><label class="chk"><input type="checkbox"><span></span>V akci <em>43</em></label></div>
   <div class="fgroup"><p class="fgroup__h">Cena</p><div class="range"><i style="left:0;right:0"></i><b style="left:0"></b><b style="right:0"></b></div><p class="range__v"><span>57 Kč</span><span>57 Kč</span></p></div>
   <div class="fgroup"><p class="fgroup__h">Barva</p><div class="sws">{sw}</div></div>

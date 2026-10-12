@@ -90,4 +90,10 @@
   };
   $$('[data-theme-set]').forEach(b => b.addEventListener('click', () => setTheme(b.dataset.themeSet)));
   setTheme(root.getAttribute('data-theme'));
+
+  /* boční menu v kategorii (zapnutelné) */
+  const sm = $('[data-sidemenu]');
+  const setSm = on => { document.body.classList.toggle('has-sidemenu', on); if (sm) sm.setAttribute('aria-pressed', on); try { sessionStorage.setItem('pl-sidemenu', on ? '1' : ''); } catch (e) {} };
+  setSm((() => { try { return !!sessionStorage.getItem('pl-sidemenu'); } catch (e) { return false; } })());
+  if (sm) sm.addEventListener('click', () => setSm(!document.body.classList.contains('has-sidemenu')));
 })();
