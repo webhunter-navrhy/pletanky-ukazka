@@ -37,6 +37,9 @@ ICON = {
     "star": '<path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/>',
     "ig": '<rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17" cy="7" r=".6"/>',
     "fb": '<path d="M14 8h2.5V4.5H14A3.5 3.5 0 0 0 10.5 8v2.5H8V14h2.5v6H14v-6h2.5l.5-3.5h-3V8.5c0-.3.2-.5.5-.5z"/>',
+    "pin": '<path d="M12 20.5v-7M9 4.5h6l-1 5 3 3.5H7l3-3.5z"/>',
+    "blog": '<path d="M5 5h14v14H5zM8.5 9.5h7M8.5 12.5h7M8.5 15.5h4"/>',
+    "card": '<rect x="3.5" y="6" width="17" height="12" rx="2"/><path d="M3.5 10h17"/>',
     "minus": '<path d="M6 12h12"/>',
     "plus": '<path d="M12 6v12M6 12h12"/>',
     "info": '<circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5M12 7.8v.4"/>',
@@ -114,7 +117,7 @@ NAV = [
 ]
 
 def _mt(label, img):
-    return f'<a class="mega__t" href="kategorie.html"><span class="mega__ti"><img src="{img}" alt="" loading="lazy"></span><span>{label}</span></a>'
+    return f'<a class="mega__t" href="kategorie.html"><span class="mega__ti"><img src="{img}" alt="" loading="lazy"></span><span class="mega__l">{label}</span></a>'
 
 
 MEGAS = {
@@ -217,18 +220,18 @@ def cart_drawer():
 def demo_panel():
     """Přepínač barevných variant + informace o ukázce (není součást e-shopu)."""
     return f'''<div class="demo" role="region" aria-label="Ovládání ukázky">
-  <span class="demo__l">{ico("palette","ico ico--sm")}<span>Nezávazná ukázka, verze 5</span></span>
+  <span class="demo__l">{ico("palette","ico ico--sm")}<span>Nezávazná ukázka, verze 6</span></span>
   <button type="button" class="demo__b" data-theme-set="d" aria-label="Fialová varianta"><i class="demo__sw demo__sw--d"></i><span>Fialová</span></button>
   <button type="button" class="demo__b" data-theme-set="e" aria-label="Červená varianta"><i class="demo__sw demo__sw--e"></i><span>Červená</span></button>
   <button type="button" class="demo__info" data-about-open aria-label="O ukázce">{ico("info","ico ico--sm")}<span>O ukázce</span></button>
 </div>
 <div class="drawer drawer--about" data-about aria-hidden="true">
   <div class="drawer__panel">
-    <div class="drawer__head"><b>Nezávazná ukázka, verze 5</b><button type="button" data-about-close aria-label="Zavřít">{ico("close")}</button></div>
+    <div class="drawer__head"><b>Nezávazná ukázka, verze 6</b><button type="button" data-about-close aria-label="Zavřít">{ico("close")}</button></div>
     <div class="about">
       <p>Upravená ukázka vzhledu e-shopu <b>Pletánky.cz</b> od Studentských Webů podle Vaší zpětné vazby.</p>
       <ul>
-        <li>Barvy: lišty i drobné detaily (tlačítka, akce, ceny) mají vždy stejný odstín. Dole je přepínač: fialová (odstín původních lišt) a červená (odstín dosavadních akcentů).</li>
+        <li>Barvy: lišty i drobné detaily (tlačítka, akce, ceny) mají vždy stejný odstín, zlaté detaily (linky, ikony, nadpisy) zůstávají zlaté. Newsletter je světlý, aby se odlišil od patičky. Všechny barvy a písma jsou v šabloně proměnné a dají se kdykoli přeladit. Dole je přepínač: fialová (odstín původních lišt) a červená (odstín dosavadních akcentů).</li>
         <li>Logo je vlevo, vyhledávání uprostřed. Oblíbené kategorie mají původní rozložení, rohy tlačítek a fotek jsou jemně zaoblené.</li>
         <li>Sekce „Krása podzimu“ je prostor pro téma měsíce a doporučené produkty, její název i výběr se dá měnit. Odstín měsíce je v banneru jako malý rámeček.</li>
         <li>Jedno písmo pro všechny nadpisy i názvy, u každé sekce jeden nadpis, jemně zaoblené rohy a sekce oddělené jemnou linkou.</li>
@@ -248,13 +251,14 @@ def footer():
   <div class="wrap ftr__grid">
     <div class="ftr__brand">
       <span class="logo__txt">Pletánky</span>
-      <p>Příze na pletení a háčkování, macramé šňůry, korálky a všechno pro tvoření.</p>
-      <p class="ftr__soc"><a href="#" aria-label="Instagram">{ico("ig")}</a><a href="#" aria-label="Facebook">{ico("fb")}</a></p>
+      <p>Vše pro radost z tvoření</p>
+      <p class="ftr__soc"><a href="#" aria-label="Instagram">{ico("ig")}</a><a href="#" aria-label="Facebook">{ico("fb")}</a><a href="#" aria-label="Pinterest">{ico("pin")}</a><a href="#" aria-label="Blog">{ico("blog")}</a></p>
     </div>
-    <div><p class="ftr__h">Sortiment</p><a href="kategorie.html">Příze na pletení</a><a href="kategorie.html">Háčkovací příze</a><a href="kategorie.html">Špagáty a macramé</a><a href="kategorie.html">Korálky a kameny</a><a href="kategorie.html">Dárkové poukazy</a></div>
+    <div><p class="ftr__h">O nás</p><a href="#">O nás</a><a href="#">Inspirujte se na blogu</a><a href="#">Kontakty</a></div>
     <div><p class="ftr__h">Nakupování</p><a href="#">Doprava a platby</a><a href="#">Obchodní podmínky</a><a href="#">Ochrana osobních údajů</a><a href="#">Hodnocení obchodu</a></div>
-    <div><p class="ftr__h">Kontakt</p><a href="#">info@pletanky.cz</a><a href="#">Kontakty</a><a href="#">Blog a návody</a></div>
+    <div class="ftr__contact"><p class="ftr__h">Kontakt</p><a href="#">info@pletanky.cz</a><span>Pletánky.cz<br>adresa skladu (doplníme)</span></div>
   </div>
+  <div class="wrap ftr__pay"><span class="ftr__h">Platební metody</span><ul><li>{ico("card","ico ico--sm")} Platební karta</li><li>Apple Pay</li><li>Google Pay</li><li>Bankovní převod</li><li>Dobírka</li></ul></div>
   <div class="wrap ftr__bottom"><span>© Pletánky.cz</span><span>Nezávazná ukázka vzhledu · Studentské Weby</span></div>
 </footer>'''
 
@@ -418,7 +422,7 @@ home_body = f'''
   <picture><source media="(max-width:760px)" srcset="img/v2/hero-m.jpg"><img class="banner__img" src="img/v2/hero.jpg" alt="Pletený svetr a šálek kávy" fetchpriority="high"></picture>
   <div class="wrap banner__in">
     <div class="banner__box">
-      <h1 class="h1">Každý projekt začíná jedním klubkem</h1>
+      <h1 class="h1">Vše pro radost z&nbsp;tvoření</h1>
       <p>Příze DROPS, Alize a YarnArt, šňůry na macramé, korálky a kameny. Vyberte si barvu, která Vám udělá radost.</p>
       <a class="motm-mini" href="produkt.html"><img src="img/p/svestka-velka.jpg" alt=""><span><small>Odstín měsíce</small><b>DROPS Brushed Alpaca Silk 44 – švestka</b></span></a>
       <div class="banner__cta">
@@ -449,11 +453,13 @@ home_body = f'''
 
 {projects()}
 
-<section class="sec">
+<section class="sec sec--alt">
   <div class="wrap">
     {sechead("Krása podzimu")}
-    <p class="sec__lead">Téma měsíce: tipy a doporučené produkty k nákupu.</p>
-    <div class="pgrid">{"".join(card(p) for p in P["mix"][4:8])}</div>
+    <div class="edit">
+      <a class="edit__img" href="kategorie.html"><img src="img/v2/blog-taska.jpg" alt="Podzimní tvoření z příze" loading="lazy"><span><small>Téma měsíce</small>Podzim v teplých odstínech</span></a>
+      <div class="edit__grid">{"".join(card(p) for p in [p for p in P["mix"][4:] if "Ametyst" not in p["name"]][:4])}</div>
+    </div>
     <p class="sec__more"><a class="btn btn--line" href="kategorie.html">Všechny tipy</a></p>
   </div>
 </section>
