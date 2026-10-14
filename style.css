@@ -673,14 +673,14 @@ body{padding-bottom:64px}
 .banner__box p{color:#3d3338}
 .usp{border-bottom:0;background:#fff;padding:34px 0 8px}
 .usp__in span+span{border-left:0}
-.usp__in span{flex-direction:column;gap:14px;padding:12px 14px;font-size:15px;font-weight:500;letter-spacing:.02em;text-transform:none;color:var(--ink);cursor:default}
-.usp .ico{width:30px;height:30px;box-sizing:content-box;padding:20px;border-radius:50%;background:#f3e9ee;color:var(--accent);transition:background .3s,color .3s,transform .3s}
+.usp__in span{flex-direction:row;justify-content:flex-start;text-align:left;gap:16px;padding:12px 14px;font-size:18px;line-height:1.3;font-weight:500;letter-spacing:.02em;text-transform:none;color:var(--ink);cursor:default}
+.usp .ico{width:30px;height:30px;box-sizing:content-box;padding:16px;flex:none;border-radius:50%;background:#f3e9ee;color:var(--accent);transition:background .3s,color .3s,transform .3s}
 .usp__in span:hover .ico,.usp__in span:focus-within .ico{background:var(--accent);color:#fff;transform:translateY(-3px)}
 /* ostré rohy obrázků, zaoblená tlačítka a štítky */
 .tile,.proj__img,.mega__promo,.mega__ti,.cmp__frame,.tiles--mosaic,.edit__img,.pc__img,.pc img,.pd__img,.pd__gal img,.post img,.rev img,.ig img,.ig a,.motm-mini img,.banner__img{border-radius:0}
-.btn,.chip,.search,.news__form,.motm-mini,.tile__box,.edit__img span{border-radius:999px}
-.tile__box{border-radius:22px}
-.edit__img span{border-radius:22px}
+.btn,.chip,.search,.news__form,.motm-mini,.tile__box{border-radius:var(--r)}
+.motm-mini{overflow:hidden;padding:0 14px 0 0;gap:12px}
+.motm-mini img{width:64px;height:64px;flex:none;display:block}
 .ftr__pay li.pay{border-radius:6px;background:#fff;color:#333;font-weight:600;padding:6px 14px;letter-spacing:.02em;border:0}
 .pay--gopay{color:#1f6fe0!important;font-style:italic}
 .pay--visa{color:#1a1f71!important;font-style:italic;font-weight:800!important;letter-spacing:.06em!important}
@@ -694,3 +694,12 @@ body{padding-bottom:64px}
 .has-sidemenu .fgroup--menu{display:block}
 @media (max-width:760px){.banner::before{display:none}.banner__box{background:#fff;padding:24px 20px}.usp .ico{padding:14px}}
 @media (max-width:760px){.usp__in span{font-size:12.5px;letter-spacing:0;padding:10px 6px;overflow-wrap:anywhere;hyphens:auto}.usp .ico{padding:12px;width:24px;height:24px}}
+
+/* verze 8: pruh tématu měsíce, prohlášení vedle ikon */
+.themeband{position:relative;display:block;min-height:260px;overflow:hidden}
+.themeband img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:0}
+.themeband::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(255,255,255,.88) 0%,rgba(255,255,255,.65) 40%,rgba(255,255,255,0) 70%)}
+.themeband__in{position:relative;z-index:2;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:10px;min-height:260px;padding:30px 40px}
+.themeband small{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mark)}
+.themeband b{font-weight:400;font-size:34px;line-height:1.15}
+@media (max-width:760px){.themeband__in{padding:22px 20px}.themeband b{font-size:26px}.usp__in span{flex-direction:row}.usp .ico{padding:10px}}

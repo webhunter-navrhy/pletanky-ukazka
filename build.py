@@ -220,7 +220,7 @@ def cart_drawer():
 def demo_panel():
     """Přepínač barevných variant + informace o ukázce (není součást e-shopu)."""
     return f'''<div class="demo" role="region" aria-label="Ovládání ukázky">
-  <span class="demo__l">{ico("palette","ico ico--sm")}<span>Nezávazná ukázka, verze 7</span></span>
+  <span class="demo__l">{ico("palette","ico ico--sm")}<span>Nezávazná ukázka, verze 8</span></span>
   <button type="button" class="demo__b" data-theme-set="d" aria-label="Fialová varianta"><i class="demo__sw demo__sw--d"></i><span>Fialová</span></button>
   <button type="button" class="demo__b" data-theme-set="e" aria-label="Červená varianta"><i class="demo__sw demo__sw--e"></i><span>Červená</span></button>
   <button type="button" class="demo__b" data-sidemenu aria-pressed="false"><i class="demo__sw"></i><span>Boční menu</span></button>
@@ -228,13 +228,13 @@ def demo_panel():
 </div>
 <div class="drawer drawer--about" data-about aria-hidden="true">
   <div class="drawer__panel">
-    <div class="drawer__head"><b>Nezávazná ukázka, verze 7</b><button type="button" data-about-close aria-label="Zavřít">{ico("close")}</button></div>
+    <div class="drawer__head"><b>Nezávazná ukázka, verze 8</b><button type="button" data-about-close aria-label="Zavřít">{ico("close")}</button></div>
     <div class="about">
       <p>Upravená ukázka vzhledu e-shopu <b>Pletánky.cz</b> od Studentských Webů podle Vaší zpětné vazby.</p>
       <ul>
         <li>Barvy: lišty i drobné detaily (tlačítka, akce, ceny) mají vždy stejný odstín, zlaté detaily (linky, ikony, nadpisy) zůstávají zlaté. Newsletter je světlý, aby se odlišil od patičky. Všechny barvy a písma jsou v šabloně proměnné a dají se kdykoli přeladit. Dole je přepínač: fialová (odstín původních lišt) a červená (odstín dosavadních akcentů).</li>
         <li>Logo je vlevo, vyhledávání uprostřed. Oblíbené kategorie mají původní rozložení, rohy tlačítek a fotek jsou jemně zaoblené.</li>
-        <li>Sekce „Krása podzimu“ je prostor pro téma měsíce a doporučené produkty, její název i výběr se dá měnit. Odstín měsíce je v banneru jako malý rámeček.</li>
+        <li>Pruh „Krása podzimu“ je prostor pro téma měsíce: fotka, název a tlačítko Zobrazit nabídku, které otevře vybrané produkty. Název i fotku půjde měnit.</li>
         <li>Jedno písmo pro všechny nadpisy i názvy, u každé sekce jeden nadpis, jemně zaoblené rohy a sekce oddělené jemnou linkou.</li>
         <li>Najeďte myší na produkt: rozbalí se složení, návin, jehlice a tlačítko do košíku.</li>
         <li>Recenze jsou skutečná hodnocení z Vaší stránky Hodnocení obchodu (stav 10.&nbsp;10.&nbsp;2026). Komentáře k produktům jsou jen ilustrační místa.</li>
@@ -454,14 +454,12 @@ home_body = f'''
 
 {projects()}
 
-<section class="sec sec--alt">
+<section class="sec">
   <div class="wrap">
-    {sechead("Krása podzimu")}
-    <div class="edit">
-      <a class="edit__img" href="kategorie.html"><img src="img/v2/blog-taska.jpg" alt="Podzimní tvoření z příze" loading="lazy"><span><small>Téma měsíce</small>Podzim v teplých odstínech</span></a>
-      <div class="edit__grid">{"".join(card(p) for p in [p for p in P["mix"][4:] if "Ametyst" not in p["name"]][:4])}</div>
-    </div>
-    <p class="sec__more"><a class="btn btn--line" href="kategorie.html">Všechny tipy</a></p>
+    <a class="themeband" href="kategorie.html">
+      <img src="img/v2/tema-podzim.jpg" alt="Podzimní tvoření z příze" loading="lazy">
+      <span class="themeband__in"><small>Téma měsíce</small><b>Krása podzimu</b><span class="btn btn--cart">Zobrazit nabídku</span></span>
+    </a>
   </div>
 </section>
 

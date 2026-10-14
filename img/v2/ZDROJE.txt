@@ -9,3 +9,4 @@ proj-macrame.jpg         https://www.pexels.com/photo/7262477/
 proj-sperky.jpg          https://www.pexels.com/photo/18609437/
 blog-macrame.jpg         https://www.pexels.com/photo/5467462/
 blog-taska.jpg           https://www.pexels.com/photo/5789581/
+tema-podzim.jpg        https://www.pexels.com/photo/5789581/ (výřez)
